@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ftmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_student">
+    <EditText
+        android:id="@+id/adds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="enter student name"
+        android:layout_marginTop="35dp"
+        />
+    <Button
+        android:id="@+id/sbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adds"
+        android:text="save"
+        />
+    <Button
+        android:id="@+id/sbt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sbt"
+        android:text=" view students"
+        />
+
+</RelativeLayout>

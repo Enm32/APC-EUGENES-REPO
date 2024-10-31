@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student name"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        />
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/mathpp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="math"
+            android:layout_marginTop="65dp"
+            android:backgroundTint="#55574e"
+            />
+        <Button
+            android:id="@+id/englishpp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="english"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/mathpp2"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#55574e"
+            />
+        <Button
+            android:id="@+id/sciencepp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="science"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/englishpp2"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#55574e"
+            />
+
+        <Button
+            android:id="@+id/pepp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/sciencepp2"
+            android:backgroundTint="#55574e"
+            android:text="pe" />
+    </LinearLayout>
+</HorizontalScrollView>
+    <FrameLayout
+        android:id="@+id/FL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"/>
+
+
+    <!--
+    <TextView
+        android:id="@+id/math"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Math"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"/>
+
+    <Spinner
+        android:id="@+id/mathtopicsspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_toEndOf="@id/math"
+        android:minHeight="48dp" />
+
+    <Spinner
+        android:id="@+id/mathratingspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mathtopicsspinner"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:minHeight="48dp" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="english"
+        android:layout_marginTop="300dp"/>
+
+    <Spinner
+        android:id="@+id/englishtopicspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_toEndOf="@id/textView3"
+        android:minHeight="48dp" />
+
+    <Spinner
+        android:id="@+id/englishratingpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_toEndOf="@id/englishtopicspinner"
+        android:minHeight="48dp" />
+
+
+    <Button
+        android:id="@+id/pdf_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create pdf"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+  />
+-->
+
+</RelativeLayout>

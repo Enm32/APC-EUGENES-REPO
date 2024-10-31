@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pp2_material.englishpp2frag">
+
+
+    <TextView
+        android:id="@+id/eng_verbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="verbs"
+        />
+    <TextView
+        android:id="@+id/eng_nouns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nouns"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:id="@+id/eng_adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adverbs"
+        android:layout_marginTop="65dp"
+        />
+
+</FrameLayout>
