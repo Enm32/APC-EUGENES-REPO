@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -38,43 +39,47 @@ public class pp2activity extends AppCompatActivity {
             return insets;
         });
 
-
+        Toolbar yb=findViewById(R.id.pp2_toolbar);
+        setSupportActionBar(yb);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
        RecyclerView cr = findViewById(R.id.rv_students);
         cr.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
      //  DBHandler ghk = new DBHandler(this);
        //ArrayList<students_name> hju = ghk.read_student();
-        retrofit_service rfs=new retrofit_service();
-        getStudents_api gsa=rfs.getRetrofit().create(getStudents_api.class);
-        gsa.getStudents().enqueue(new Callback<List<students>>() {
-            @Override
-            public void onResponse(Call<List<students>> call, Response<List<students>> response) {
-                s_names=response.body();
-                rv_adapter adapter = new rv_adapter(pp2activity.this);
+//        retrofit_service rfs=new retrofit_service();
+//        getStudents_api gsa=rfs.getRetrofit().create(getStudents_api.class);
+//        gsa.getStudents().enqueue(new Callback<List<students>>() {
+//            @Override
+//            public void onResponse(Call<List<students>> call, Response<List<students>> response) {
+//                s_names=response.body();
+//                rv_adapter adapter = new rv_adapter(pp2activity.this);
+//                adapter.setSn(s_names);
+//                cr.setAdapter(adapter);
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<students>> call, Throwable throwable) {
+//                 Toast.makeText(pp2activity.this,throwable.getMessage(),Toast.LENGTH_SHORT).show();
+//                Logger.getLogger(pp2activity.class.getName()).log(Level.SEVERE,"tuff",throwable);
+//            }
+//        });
+       String nms="martin munene";
+
+        s_names.add(new students("Edwin Mureithi"));
+        s_names.add(new students("Kevin Kamau"));
+        s_names.add(new students("Ken kevin"));
+        s_names.add(new students("Mathew max"));
+        s_names.add(new students("Edna Maggy"));
+        s_names.add(new students(nms));
+        s_names.add(new students("Ejkklll kll"));
+        s_names.add(new students("wycliffe alfred"));
+        s_names.add(new students("wyd"));
+        s_names.add(new students("martin"));
+        rv_adapter adapter = new rv_adapter(pp2activity.this);
                 adapter.setSn(s_names);
                 cr.setAdapter(adapter);
-
-            }
-
-            @Override
-            public void onFailure(Call<List<students>> call, Throwable throwable) {
-                 Toast.makeText(pp2activity.this,throwable.getMessage(),Toast.LENGTH_SHORT).show();
-                Logger.getLogger(pp2activity.class.getName()).log(Level.SEVERE,"tuff",throwable);
-            }
-        });
-//       String nms="martin munene";
-//        s_names.add(new students_name("Eugene Ndungu"));
-//        s_names.add(new students_name("Edwin Mureithi"));
-//        s_names.add(new students_name("Kevin Kamau"));
-//        s_names.add(new students_name("Ken kevin"));
-//        s_names.add(new students_name("Mathew max"));
-//        s_names.add(new students_name("Edna Maggy"));
-//        s_names.add(new students_name(nms));
-//        s_names.add(new students_name("Ejkklll kll"));
-//        s_names.add(new students_name("wycliffe alfred"));
-//        s_names.add(new students_name("wyd"));
-//        s_names.add(new students_name("martin"));
-
 
 
 

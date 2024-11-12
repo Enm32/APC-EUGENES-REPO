@@ -6,31 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pp2_material.pp2activity">
-<TextView
-    android:layout_marginTop="30dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text=" PP2 Students"
-    android:textStyle="bold"
-    android:textColor="#033dfc"
 
-    android:textAlignment="center"
-   />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pp2_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:title="  PP2 Students"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_students"
-
-        android:layout_marginTop="70dp"
+       android:layout_below="@id/pp2_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-   <!-- <Button
-        android:id="@+id/add_new_s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rv_students"
-        android:layout_marginTop="10dp"
-       android:text="add student" /> -->
 
 
 

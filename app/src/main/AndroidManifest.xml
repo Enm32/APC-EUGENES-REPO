@@ -31,7 +31,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Welcome to Apc"
+            android:label="Apc"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +41,8 @@
         </activity>
         <activity
             android:name=".pp2_material.rates"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".grade6_material.g6"
             android:exported="false" />
@@ -68,6 +69,7 @@
         <activity
             android:name=".pp2_material.pp2activity"
             android:exported="false"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.ProgressCheckerForcbc" />
         <activity
             android:name=".pp1_material.pp1activity"

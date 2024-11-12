@@ -4,42 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pp2_material.mathpp2">
-
+  <TextView
+      android:id="@+id/topcheader"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Topics"
+      android:layout_marginTop="10dp"
+      />
   <TextView
       android:id="@+id/math_multi"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
      android:text="multiplication"
+      android:layout_marginTop="40dp"
       />
     <TextView
         android:id="@+id/math_sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="subtraction"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         />
-    <TextView
+
+  <LinearLayout
+      android:layout_width="350dp"
+      android:layout_height="1px"
+      android:layout_marginTop="61dp"
+      android:background="@color/black" />
+
+  <TextView
         android:id="@+id/math_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="addition"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="105dp"
         />
   <Spinner
       android:id="@+id/additionSpinner"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="65dp"
+      android:layout_marginTop="105dp"
     android:layout_marginStart="95dp"
       android:entries="@array/ratingValues"/>
   <Spinner
       android:id="@+id/subtractionSpinner"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="30dp"
+      android:layout_marginTop="70dp"
       android:layout_toRightOf="@id/math_sub"
       android:layout_marginStart="95dp"
-      android:entries="@array/ratingValues"/>
+      android:entries="@array/ratingValues"
+      />
+
   <ProgressBar
       android:id="@+id/idLoadingPB"
       android:layout_width="wrap_content"

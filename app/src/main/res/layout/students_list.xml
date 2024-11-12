@@ -10,16 +10,17 @@
     android:layout_height="80dp"
     android:layout_margin="5dp"
     android:layout_marginStart="30dp"
-    app:cardElevation="16dp"
-    app:cardMaxElevation="22dp"
     app:cardPreventCornerOverlap="true"
-    app:cardBackgroundColor="#d0d6cb">
+    app:cardBackgroundColor="#f5e9f1">
     <TextView
         android:id="@+id/stu_names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="Student name"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
+        android:textSize="25sp"
         />
 </androidx.cardview.widget.CardView>
 

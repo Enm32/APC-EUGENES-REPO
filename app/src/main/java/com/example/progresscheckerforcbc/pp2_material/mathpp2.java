@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -18,9 +19,12 @@ import android.widget.Toast;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
+import com.example.progresscheckerforcbc.model.students;
 import com.example.progresscheckerforcbc.retrofit.add_rating_api;
 import com.example.progresscheckerforcbc.retrofit.retrofit_service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -99,7 +103,7 @@ public class mathpp2 extends Fragment {
 
 
 
-
+    //    ArrayAdapter<String> sad=new ArrayAdapter<>(getContext(), R.layout.spinner_layout,ratess);
 
         ProgressBar pb=(ProgressBar) getView().findViewById(R.id.idLoadingPB);
         retrofit_service rs=new retrofit_service();
@@ -110,6 +114,7 @@ public class mathpp2 extends Fragment {
         adm.setSubject("mathPp2");
 
         Spinner spp=  getView().findViewById(R.id.additionSpinner);
+
    spp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
        @Override
        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

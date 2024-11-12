@@ -12,6 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="?attr/colorPrimary"
+            app:title="  PP3 Students"
             />
 
     <TextView
