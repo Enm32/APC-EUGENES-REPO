@@ -39,13 +39,26 @@
         android:text="addition"
         android:layout_marginTop="105dp"
         />
-  <Spinner
-      android:id="@+id/additionSpinner"
+  <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="105dp"
-    android:layout_marginStart="95dp"
-      android:entries="@array/ratingValues"/>
+      android:layout_marginStart="95dp"
+      android:background="@drawable/spinner_background"
+      >
+    <Spinner
+        android:id="@+id/additionSpinner"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:entries="@array/ratingValues"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/star"/>
+  </LinearLayout>
+
   <Spinner
       android:id="@+id/subtractionSpinner"
       android:layout_width="wrap_content"

@@ -6,7 +6,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string-array name="ratingValues">
-        <item>select a rating</item>
+        <item>Rate</item>
         <item>above expectations</item>
         <item>below expectations</item>
         <item>meeting expectations</item>
