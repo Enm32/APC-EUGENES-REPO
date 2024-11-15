@@ -94,8 +94,8 @@ public class rates extends AppCompatActivity {
 
             ft.replace(R.id.FL, fragment_name);
 
-//            fm.popBackStack(Root_Frag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-//            ft.addToBackStack(Root_Frag);
+           fm.popBackStack();
+//         ft.addToBackStack(Root_Frag);
 
         }
         else {
