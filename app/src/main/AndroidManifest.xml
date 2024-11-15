@@ -19,6 +19,7 @@
         android:theme="@style/Theme.ProgressCheckerForcbc"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".grade9_material.g9"
             android:exported="false" />
@@ -41,15 +42,13 @@
         </activity>
         <activity
             android:name=".pp2_material.rates"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".grade6_material.g6"
             android:exported="false" />
         <activity
             android:name=".grade5_material.g5"
-            android:exported="false"
-            android:label="@string/app_name" />
+            android:exported="false" />
         <activity
             android:name=".grade4_material.g4"
             android:exported="false" />
