@@ -44,7 +44,7 @@ public class rates extends AppCompatActivity {
             return insets;
         });
         Button btnMath, btneng, btnscience;
-        ImageButton ff=findViewById(R.id.imgb);
+
         btnMath = findViewById(R.id.mathpp2);
         btneng = findViewById(R.id.englishpp2);
         btnscience = findViewById(R.id.sciencepp2);
@@ -54,7 +54,7 @@ public class rates extends AppCompatActivity {
         sname.setText(strn);
 
         // default frag
-      //  loadFrag(mathpp2.newInstance(strn,"mne"), 0);
+       loadFrag(mathpp2.newInstance(strn,"mne"), 0);
 
         btnMath.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,8 +94,8 @@ public class rates extends AppCompatActivity {
 
             ft.replace(R.id.FL, fragment_name);
 
-            fm.popBackStack(Root_Frag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            ft.addToBackStack(Root_Frag);
+//            fm.popBackStack(Root_Frag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+//            ft.addToBackStack(Root_Frag);
 
         }
         else {
