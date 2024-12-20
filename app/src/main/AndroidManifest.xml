@@ -19,7 +19,23 @@
         android:theme="@style/Theme.ProgressCheckerForcbc"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".start_activity"
+            android:exported="true"
+            android:theme="@style/SplashTheme"
+            > <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity
+            android:name=".otLogin"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@style/Theme.ProgressCheckerForcbc"/>
+        <activity
+            android:name=".pp1_material.pp1_rate"
+            android:exported="false" />
         <activity
             android:name=".grade9_material.g9"
             android:exported="false" />
@@ -31,14 +47,9 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="Apc"
-            android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           >
         </activity>
         <activity
             android:name=".pp2_material.rates"
@@ -73,6 +84,7 @@
         <activity
             android:name=".pp1_material.pp1activity"
             android:exported="false"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.ProgressCheckerForcbc" />
     </application>
 

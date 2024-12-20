@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ete">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/mainActRL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/mainAct_toolbar"
             android:layout_width="match_parent"
@@ -22,20 +20,21 @@
 
         <ImageView
             android:id="@+id/userAvatar"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="45dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
             android:paddingRight="5dp"
-            android:src="@drawable/avatar_foreground" />
+            android:src="@drawable/user_account" />
 
         <TextView
             android:id="@+id/tdr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="59dp"
-            android:layout_marginStart="65dp"
-            android:text="  Hello User"
+            android:layout_toRightOf="@id/userAvatar"
+            android:text="Hello User"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="19dp"
@@ -43,13 +42,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/pp1card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="120dp"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -65,14 +63,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/pp3card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/pp1card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -88,14 +85,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/pp2card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="120dp"
             android:layout_toRightOf="@id/pp1card"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -111,15 +107,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade1card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/pp2card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@id/pp3card"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -135,14 +130,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade2card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/pp3card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -158,15 +152,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade3card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade1card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@id/grade2card"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -182,14 +175,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade4card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade2card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -205,15 +197,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade5card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade3card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@id/grade2card"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -230,14 +221,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade6card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade4card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -254,15 +244,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade7card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade5card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@id/grade6card"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -278,15 +267,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade8card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade6card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
@@ -302,8 +290,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/grade9card"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
             android:layout_below="@id/grade7card"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
@@ -311,7 +299,6 @@
             android:layout_toRightOf="@id/grade8card"
             app:cardBackgroundColor="#3432a8"
             app:cardCornerRadius="9dp"
-            app:cardElevation="20dp"
             app:cardPreventCornerOverlap="true">
 
             <TextView
