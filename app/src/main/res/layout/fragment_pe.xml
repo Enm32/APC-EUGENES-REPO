@@ -4,11 +4,114 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pp2_material.pe">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic 1"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginStart="185dp"
+            >
+            <Spinner
+                android:id="@+id/pet1Spinner"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:entries="@array/ratingValues"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </LinearLayout>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="1px"
+        android:layout_marginTop="68dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic 2"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginStart="182dp"
+            >
+            <Spinner
+                android:id="@+id/pet2Spinner"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:entries="@array/ratingValues"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="1px"
+        android:layout_marginTop="107dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic 3"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginStart="180dp"
+            >
+            <Spinner
+                android:id="@+id/pet3Spinner"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:entries="@array/ratingValues"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 </FrameLayout>

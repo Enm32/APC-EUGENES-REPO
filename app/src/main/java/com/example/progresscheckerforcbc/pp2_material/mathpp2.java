@@ -133,6 +133,7 @@ public class mathpp2 extends Fragment {
 
                             @Override
                             public void onFailure(Call<rating_response> call, Throwable throwable) {
+                                pb.setVisibility(View.GONE);
                                 Toast.makeText(getContext(),throwable.getMessage(),Toast.LENGTH_SHORT).show();
                                 Logger.getLogger(mathpp2.class.getName()).log(Level.SEVERE,"error occured",throwable);
                             }

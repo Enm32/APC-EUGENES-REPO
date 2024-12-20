@@ -11,7 +11,8 @@
     android:layout_margin="5dp"
     android:layout_marginStart="30dp"
     app:cardPreventCornerOverlap="true"
-    app:cardBackgroundColor="#f5e9f1">
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="#3432a8">
     <TextView
         android:id="@+id/stu_names"
         android:layout_width="wrap_content"
@@ -19,6 +20,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Student name"
+        android:textColor="@color/white"
         android:layout_gravity="left"
         android:textSize="25sp"
         />

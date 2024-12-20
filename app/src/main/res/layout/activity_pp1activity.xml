@@ -2,16 +2,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/pp1_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pp2_material.pp2activity">
-    <TextView
-        android:layout_centerInParent="true"
-        android:id="@+id/wtt"
+    tools:context=".pp1_material.pp1activity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/pp3_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:title="  PP1 Students"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pp1students"
+        android:layout_below="@id/pp3_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <LinearLayout
+        android:id="@+id/net_state_pp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="this is pp1"
-        android:fontFamily="sans-serif-condensed-medium"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_internet"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="5dp"
+            android:text="No internet"/>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pp1_students_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
 
 </RelativeLayout>

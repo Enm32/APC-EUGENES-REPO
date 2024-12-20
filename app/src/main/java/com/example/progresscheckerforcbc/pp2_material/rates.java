@@ -95,12 +95,13 @@ public class rates extends AppCompatActivity {
             ft.replace(R.id.FL, fragment_name);
 
            fm.popBackStack();
-//         ft.addToBackStack(Root_Frag);
+        // ft.addToBackStack(Root_Frag);
 
         }
         else {
             ft.replace(R.id.FL, fragment_name);
-            ft.addToBackStack(null);
+          // ft.addToBackStack(null);
+            fm.popBackStack();
         }
 
         ft.commit();

@@ -4,27 +4,124 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pp2_material.sciencepp2frag">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:id="@+id/sci_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic 1"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginStart="155dp"
+            >
+            <Spinner
+                android:id="@+id/t1Spinner"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:entries="@array/ratingValues"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="68dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
 
 
-    <TextView
-        android:id="@+id/sci_1"
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="topic 1"
-        />
-    <TextView
-        android:id="@+id/sci_2"
+        android:layout_marginTop="80dp">
+        <TextView
+            android:id="@+id/sci_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic 2"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginStart="155dp"
+            >
+            <Spinner
+                android:id="@+id/t2Spinner"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:entries="@array/ratingValues"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="107dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="topic 2"
-        android:layout_marginTop="30dp"
-        />
-    <TextView
-        android:id="@+id/sci_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="topic 3"
-        android:layout_marginTop="65dp"
-        />
+        android:layout_marginTop="120dp">
+        <TextView
+            android:id="@+id/sci_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic 3"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginStart="155dp"
+            >
+            <Spinner
+                android:id="@+id/t3Spinner"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:entries="@array/ratingValues"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
 </FrameLayout>
+
+
+
+
+
