@@ -26,7 +26,8 @@ public class students {
 private String student_name;
 @JsonIgnore
 private String parent_name;
-
+@JsonIgnore
+private String emailAddress;
 @ManyToOne
 @JsonIgnore
 private gradeclasses studentGrade;

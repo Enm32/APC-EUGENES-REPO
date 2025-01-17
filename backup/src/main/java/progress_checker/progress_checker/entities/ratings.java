@@ -22,11 +22,14 @@ import lombok.NoArgsConstructor;
 public class ratings {
  @GeneratedValue(strategy = GenerationType.UUID)
  @Id 
+ @JsonIgnore
 private UUID id;
-
+@JsonIgnore
 private String subject;
+
 private String topic ;
 private String rating;
+
 @ManyToOne
 @JsonIgnore
 private students Student;

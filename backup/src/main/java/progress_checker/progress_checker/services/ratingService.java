@@ -35,6 +35,10 @@ public  List<ratings> get_rating_by_subject(String subject){
     return ratings_repo.findBySubject(subject).orElse(null);
 }
 
-
+public List<ratings> get_rate(String a,String b){
+   students df= sess.get_by_name(b);
+ //  System.out.println(df);
+    return ratings_repo.findBystudentandsubject(a, df).orElse(null);
+}
 
 }
