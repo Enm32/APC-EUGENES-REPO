@@ -18,7 +18,8 @@ subjectsRepo subjects_repo;
 @Autowired
 gradeService gss;
 public subjects get_subject(String name){
-   return  subjects_repo.findBySname(name).orElse(null);
+//  kkkfkfd
+  return  subjects_repo.findBySname(name).orElse(null);
 }
 
 public subjects add_subject(subjectsModel newSubject){
