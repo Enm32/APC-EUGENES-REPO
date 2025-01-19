@@ -7,26 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".homeActivity">
 
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple"
+    app:title="Students"
+    app:popupTheme="@style/MyToolbarStyle"/>
 
-    <TextView
-        android:id="@+id/ktitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Students"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="32dp"
-        android:layout_centerHorizontal="true"/>
+
+
 
 <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/home_rv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="90dp"
+    android:layout_marginTop="150dp"
     android:layout_marginStart="20dp"/>
 
+        <TextView
+            android:id="@+id/ktitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ll"
 
+            android:layout_centerHorizontal="true"
+             android:layout_marginTop="70dp"/>
 
 
 </RelativeLayout>

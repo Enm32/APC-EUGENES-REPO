@@ -2,6 +2,12 @@ package com.example.parents_app;
 
 
 
+
+
+
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -39,13 +45,18 @@ this.subs=su;
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.thj.setText(subs.get(position));
+        String str = holder.thj.getText().toString();
+
        holder.rv_ccv.setOnClickListener(v -> {
            Intent newInt = new Intent(context, ratingsActivity.class);
+          newInt.putExtra("student_name",str);
+           Activity activity = (Activity) context;
+           activity.startActivity(newInt);
+           activity.overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);;
+        // context.startActivity(newInt);
 
-          context.startActivity(newInt);
        });
-
-       holder.thj.setText(subs.get(position));
     }
 
 
