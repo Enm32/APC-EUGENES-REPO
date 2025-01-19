@@ -99,7 +99,7 @@ public class pp2activity extends AppCompatActivity {
         s_names.add(new students("wycliffe alfred"));
         s_names.add(new students("wyd"));
         s_names.add(new students("martin"));
-        rv_adapter adapter = new rv_adapter(pp2activity.this);
+        rv_adapter adapter = new rv_adapter(pp2activity.this,"pp2");
                 adapter.setSn(s_names);
                 cr.setAdapter(adapter);
 

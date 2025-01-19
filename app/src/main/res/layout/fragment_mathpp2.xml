@@ -5,29 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".pp2_material.mathpp2">
 
-
   <TextView
-      android:id="@+id/math_multi"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-     android:text="multiplication"
+      android:text="Pre-number Activities"
       android:layout_marginTop="40dp"
       android:textStyle="bold"
       />
   <LinearLayout
-      android:id="@+id/multi_ll"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="40dp"
       android:layout_marginStart="185dp"
       android:background="@drawable/spinner_background"
       >
+
     <Spinner
-        android:id="@+id/multiplicationSpinner"
+        android:id="@+id/pnapp2_Spinner"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:entries="@array/ratingValues"/>
+        android:entries="@array/ratingValues"
+        tools:ignore="TouchTargetSizeCheck" />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +36,6 @@
 
 
   <LinearLayout
-      android:id="@+id/ll1"
       android:layout_width="300dp"
       android:layout_height="1px"
       android:layout_marginTop="68dp"
@@ -48,27 +46,27 @@
 
 
   <TextView
-        android:id="@+id/math_sub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="subtraction"
-        android:layout_marginTop="80dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Numbering"
+      android:layout_marginTop="80dp"
       android:textStyle="bold"
       />
   <LinearLayout
-      android:id="@+id/sub_ll"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="80dp"
       android:layout_marginStart="185dp"
       android:background="@drawable/spinner_background"
       >
+
     <Spinner
-        android:id="@+id/sub_Spinner"
+        android:id="@+id/numberingpp2_sp"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:entries="@array/ratingValues"/>
+        android:entries="@array/ratingValues"
+        tools:ignore="TouchTargetSizeCheck" />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,7 +77,6 @@
 
 
   <LinearLayout
-      android:id="@+id/line1"
       android:layout_width="300dp"
       android:layout_height="1px"
       android:layout_marginTop="109dp"
@@ -89,27 +86,27 @@
 
 
   <TextView
-        android:id="@+id/math_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="addition"
-        android:layout_marginTop="121dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Measurement"
+      android:layout_marginTop="121dp"
       android:textStyle="bold"
       />
   <LinearLayout
-      android:id="@+id/add_ll"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="121dp"
       android:layout_marginStart="185dp"
       android:background="@drawable/spinner_background"
       >
+
     <Spinner
-        android:id="@+id/additionSpinner"
+        android:id="@+id/measurementpp2Spinner"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:entries="@array/ratingValues"/>
+        android:entries="@array/ratingValues"
+        tools:ignore="TouchTargetSizeCheck" />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,14 +114,47 @@
         android:src="@drawable/star"/>
   </LinearLayout>
 
+  <LinearLayout
+      android:layout_width="300dp"
+      android:layout_height="1px"
+      android:layout_marginTop="151dp"
+      android:background="@color/black"
+      android:orientation="horizontal" />
 
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Geometry"
+      android:layout_marginTop="161dp"
+      android:textStyle="bold"
+      />
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="161dp"
+      android:layout_marginStart="185dp"
+      android:background="@drawable/spinner_background"
+      >
+
+    <Spinner
+        android:id="@+id/geometrypp2_Spinner"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:entries="@array/ratingValues"
+        tools:ignore="TouchTargetSizeCheck" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/star"/>
+  </LinearLayout>
   <ProgressBar
-      android:id="@+id/idLoadingPB"
+      android:id="@+id/idLoadingPBmathpp2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
-
       android:visibility="gone" />
 
 </FrameLayout>

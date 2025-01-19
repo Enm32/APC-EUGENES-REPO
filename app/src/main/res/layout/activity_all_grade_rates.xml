@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".all_grade_rates_act">
+    <TextView
+        android:id="@+id/textViewkm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student name"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        />
+
+
+
+    <HorizontalScrollView
+        android:id="@+id/allsubHorizontal_view"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/Mathematicsbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:gravity="bottom"
+                android:text="Maths"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/Englishbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/rectangle_btn"
+                android:gravity="bottom"
+                android:text="English"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/Kiswahilibtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="62dp"
+                android:gravity="bottom"
+                android:text="Kiswahili"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/Sciencebtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="62dp"
+                android:gravity="bottom"
+                android:background="@drawable/rectangle_btn"
+                android:text="Science"
+                app:backgroundTint="@null"/>
+
+
+
+            <Button
+                android:id="@+id/SocialStudiesbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:gravity="bottom"
+                android:text="S/Studies"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/CREbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/rectangle_btn"
+                android:gravity="bottom"
+                android:text="Cre"
+                app:backgroundTint="@null" />
+
+
+            <Button
+                android:id="@+id/Agriculturebtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="62dp"
+                android:layout_toRightOf="@id/capp2"
+                android:gravity="bottom"
+                android:text="Agriculture"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/ArtandCraftbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:gravity="bottom"
+                android:background="@drawable/rectangle_btn"
+                android:text="Art and Craft"
+                app:backgroundTint="@null"/>
+
+
+
+
+            <Button
+                android:id="@+id/Environmentalbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:gravity="bottom"
+                android:text="Environmental activities"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+
+            <Button
+                android:id="@+id/homesciencebtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_toRightOf="@id/mathpp2"
+                android:background="@drawable/rectangle_btn"
+                android:gravity="bottom"
+                android:text="HomeScience"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/hygieneandnutritionbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:gravity="bottom"
+                android:text="Hygiene and Nutrition"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/musicbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="62dp"
+                android:gravity="bottom"
+                android:background="@drawable/rectangle_btn"
+                android:text="Music"
+                app:backgroundTint="@null"/>
+
+
+
+
+            <Button
+                android:id="@+id/pebtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:gravity="bottom"
+                android:text="PE"
+                android:layout_marginTop="62dp"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+            <Button
+                android:id="@+id/pretechnicalstudiesbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/rectangle_btn"
+                android:gravity="bottom"
+                android:text="Pre-technical studies"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/visualartsbtn"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:gravity="bottom"
+                android:text="Visual arts"
+                android:background="@drawable/rectangle_btn"
+                app:backgroundTint="@null"
+                />
+
+
+
+
+
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/jtopcheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Topics"
+        android:textSize="40px"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/allsubHorizontal_view"
+        />
+    <FrameLayout
+        android:id="@+id/FLkl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/jtopcheader"
+        />
+
+
+</RelativeLayout>

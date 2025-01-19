@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pp1_material.math_pp1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pre-number Activities"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:id="@+id/pnapp1_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/pnapp1_Spinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="68dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numbering"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:id="@+id/numberingpp1_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/numberingpp1_sp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="109dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Measurement"
+        android:layout_marginTop="121dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="121dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/measurementpp1Spinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="151dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+    <TextView
+        android:id="@+id/geometrypp1tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Geometry"
+        android:layout_marginTop="161dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:id="@+id/geometrypp1_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="161dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/geometrypp1_Spinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/idLoadingPBmathpp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

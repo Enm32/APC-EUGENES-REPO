@@ -4,9 +4,7 @@ package com.example.progresscheckerforcbc.pp2_material;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -19,16 +17,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.progresscheckerforcbc.R;
-import com.example.progresscheckerforcbc.pp2_material.englishpp2frag;
-import com.example.progresscheckerforcbc.pp2_material.mathpp2;
-import com.example.progresscheckerforcbc.pp2_material.sciencepp2frag;
 
 public class rates extends AppCompatActivity {
 
    // private static final int PERMISSION_REQUEST_CODE = 200;
 
 
-    String Root_Frag = "root_fagment";
+    //String Root_Frag = "root_fagment";
 
 
 
@@ -43,45 +38,32 @@ public class rates extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button btnMath, btneng, btnscience;
 
-        btnMath = findViewById(R.id.mathpp2);
-        btneng = findViewById(R.id.englishpp2);
-        btnscience = findViewById(R.id.sciencepp2);
+
+       Button btnMath = findViewById(R.id.mathpp2);
+        Button btnla = findViewById(R.id.lapp2);
+        Button btnca = findViewById(R.id.capp2);
+        Button btnea = findViewById(R.id.eapp2);
+        Button btnra = findViewById(R.id.raPP2);
+
         TextView sname=findViewById(R.id.textView2);
         Intent intent = getIntent();
         String strn = intent.getStringExtra("s_name");
         sname.setText(strn);
 
         // default frag
-       loadFrag(mathpp2.newInstance(strn,"mne"), 0);
+       loadFrag(mathpp2.newInstance(strn), 0);
 
-        btnMath.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
+        btnMath.setOnClickListener(view -> loadFrag(mathpp2.newInstance(strn), 0));
 
-                loadFrag(mathpp2.newInstance(strn,"mne"), 0);
-            }
-        });
+        btnca.setOnClickListener(view -> loadFrag(creativeActpp2.newInstance(strn), 1));
 
-        btneng.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
+        btnea.setOnClickListener(view -> loadFrag(eapp2frag.newInstance(strn), 1));
 
-                loadFrag(new englishpp2frag(), 1);
-            }
-        });
+        btnla.setOnClickListener(v -> loadFrag(languaeActpp2.newInstance(strn), 1));
 
-        btnscience.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
+        btnra.setOnClickListener(v -> loadFrag(religiousActpp2.newInstance(strn),1));
 
-                loadFrag(new sciencepp2frag(), 1);
-            }
-        });
     }
 
     // flag 0 for add, 1 for replace
