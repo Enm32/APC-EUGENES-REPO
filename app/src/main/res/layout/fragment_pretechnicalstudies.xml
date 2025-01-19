@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Strands.Pretechnicalstudies">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foundations of PT studies"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/fpt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="68dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="communication in PT studies"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="190dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/cpt"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="109dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Materials for production"
+        android:layout_marginTop="121dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="121dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/Mfp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="151dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tools and Production"
+        android:layout_marginTop="161dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="161dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/tap"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="191dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrepreneurship"
+        android:layout_marginTop="201dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="201dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/Entrepr"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/idLoadingPts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

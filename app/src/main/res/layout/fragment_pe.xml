@@ -3,38 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pp2_material.pe">
+    tools:context=".Strands.Pe">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Games and sports"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
-        <TextView
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/Gamesandsports_spnr"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="topic 1"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/spinner_background"
-            android:layout_marginStart="185dp"
-            >
-            <Spinner
-                android:id="@+id/pet1Spinner"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:entries="@array/ratingValues"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:src="@drawable/star"/>
-        </LinearLayout>
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
     </LinearLayout>
 
+
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="1px"
         android:layout_marginTop="68dp"
         android:background="@color/black"
@@ -43,74 +45,204 @@
 
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Swimming"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="topic 2"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
 
-            />
-        <LinearLayout
+        <Spinner
+            android:id="@+id/Swimming_sp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/spinner_background"
-            android:layout_marginStart="182dp"
-            >
-            <Spinner
-                android:id="@+id/pet2Spinner"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:entries="@array/ratingValues"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:src="@drawable/star"/>
-        </LinearLayout>
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
     </LinearLayout>
 
+
+
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="1px"
-        android:layout_marginTop="107dp"
+        android:layout_marginTop="109dp"
         android:background="@color/black"
         android:orientation="horizontal" />
 
 
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gymnastics"
+        android:layout_marginTop="121dp"
+        android:textStyle="bold"
+        />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp">
-        <TextView
+        android:layout_marginTop="121dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/GymnasticsSpinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="topic 3"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/spinner_background"
-            android:layout_marginStart="180dp"
-            >
-            <Spinner
-                android:id="@+id/pet3Spinner"
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:entries="@array/ratingValues"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:src="@drawable/star"/>
-        </LinearLayout>
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="151dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health and fitness"
+        android:layout_marginTop="161dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="161dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/hafSpinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="190dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First aid in sports"
+        android:layout_marginTop="201dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="201dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/firstaidSpinner"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="1px"
+        android:layout_marginTop="228dp"
+        android:background="@color/black"
+        android:orientation="horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outdoor activities"
+        android:layout_marginTop="238dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="238dp"
+        android:layout_marginStart="185dp"
+        android:background="@drawable/spinner_background"
+        >
+
+        <Spinner
+            android:id="@+id/Outdoorsp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:entries="@array/ratingValues"
+            tools:ignore="TouchTargetSizeCheck" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/star"/>
+    </LinearLayout>
+
+
+
+
+
+
+    <ProgressBar
+        android:id="@+id/PB_pe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+
+
+
 
 
 

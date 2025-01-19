@@ -13,17 +13,21 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.progresscheckerforcbc.R;
+import com.example.progresscheckerforcbc.all_grade_rates_act;
 import com.example.progresscheckerforcbc.model.students;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class rv_adapter extends RecyclerView.Adapter<rv_adapter.viewholder>{
     private Context context;
-    public rv_adapter(Context ncontext){
+    private String grd;
+    public rv_adapter(Context ncontext, String grd){
         context=ncontext;
+        this.grd=grd;
     };
 
 
@@ -53,8 +57,15 @@ public class rv_adapter extends RecyclerView.Adapter<rv_adapter.viewholder>{
           holder.ccv.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                  Intent i = new Intent(context, rates.class);
+
+                  if(Objects.equals(grd, "pp2")){
+                       Intent ijl = new Intent(context, rates.class);
+                      ijl.putExtra("s_name", str);
+                      context.startActivity(ijl);
+                  }
+                  Intent i = new Intent(context, all_grade_rates_act.class);
                   i.putExtra("s_name", str);
+                  i.putExtra("s_grade",grd);
                   context.startActivity(i);
               }
           });

@@ -5,13 +5,45 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pp2_material.pp2activity">
-    <TextView
-        android:layout_centerInParent="true"
-        android:id="@+id/wt1"
+    tools:context=".grade1_material.grade1activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/grade1_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:title="  Grade 1 Students"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/g1_rv_students"
+        android:layout_below="@id/grade1_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <ProgressBar
+        android:id="@+id/g1pb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="this is grade 1"
-        android:fontFamily="sans-serif-condensed-medium"/>
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/net_stateg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_internet"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:text="No internet"/>
 
+
+    </LinearLayout>
 </RelativeLayout>

@@ -8,4 +8,44 @@
     android:layout_height="match_parent"
     tools:context=".grade7_material.g7">
 
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/grade7_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@color/white"
+      app:title="  Grade 7 Students"
+      />
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/g7_rv"
+      android:layout_below="@id/grade7_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+  <ProgressBar
+      android:id="@+id/g7pb"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:visibility="gone"/>
+  <LinearLayout
+      android:id="@+id/net_stateg7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:visibility="gone">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/no_internet"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="5dp"
+        android:text="No internet"/>
+
+
+  </LinearLayout>
+
   </RelativeLayout>

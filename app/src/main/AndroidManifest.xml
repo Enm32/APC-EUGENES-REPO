@@ -20,58 +20,69 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".all_grade_rates_act"
+            android:exported="false" />
+        <activity
             android:name=".start_activity"
             android:exported="true"
-            android:theme="@style/SplashTheme"
-            > <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".otLogin"
             android:exported="false"
             android:noHistory="true"
-            android:theme="@style/Theme.ProgressCheckerForcbc"/>
+            android:theme="@style/Theme.ProgressCheckerForcbc" />
         <activity
             android:name=".pp1_material.pp1_rate"
             android:exported="false" />
         <activity
             android:name=".grade9_material.g9"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".grade8_material.g8"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".grade7_material.g7"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="Apc"
-           >
-        </activity>
+            android:label="Apc" />
         <activity
             android:name=".pp2_material.rates"
             android:exported="false" />
         <activity
             android:name=".grade6_material.g6"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".grade5_material.g5"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".grade4_material.g4"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".grade3_material.g3"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".grade2_material.g2activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".grade1_material.grade1activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".pp3_material.pp3activity"
             android:exported="false"

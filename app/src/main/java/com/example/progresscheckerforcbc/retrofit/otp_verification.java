@@ -11,7 +11,7 @@ public interface otp_verification {
     @POST("/send_otp")
     Call<otpResponse> sendOtp(@Query("email") String email);
 
-    @POST("verify_otp")
+    @POST("/verify_otp")
      Call<otpResponse> verifyOtp(@Query("code") String code);
 
 }

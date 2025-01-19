@@ -32,55 +32,55 @@
             android:layout_marginLeft="10dp"
             android:gravity="bottom"
             android:text="Maths"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="62dp"
             android:background="@drawable/rectangle_btn"
             app:backgroundTint="@null"
             />
+
         <Button
-            android:id="@+id/englishpp2"
+            android:id="@+id/capp2"
             android:layout_width="130dp"
             android:layout_height="70dp"
-            android:text="english"
-            android:gravity="bottom"
-            android:layout_marginTop="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="45dp"
             android:layout_toRightOf="@id/mathpp2"
+            android:background="@drawable/rectangle_btn"
+            android:gravity="bottom"
+            android:text="Creative activities"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/eapp2"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_toRightOf="@id/capp2"
+            android:gravity="bottom"
+            android:text="Environmental activities"
             android:background="@drawable/rectangle_btn"
             app:backgroundTint="@null"
             />
 
         <Button
-            android:id="@+id/sciencepp2"
-            android:layout_width="130dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="65dp"
-            android:layout_toRightOf="@id/englishpp2"
-            android:gravity="bottom"
-            android:text="science"
-            android:background="@drawable/rectangle_btn"
-            app:backgroundTint="@null"
-            />
-
-        <Button
-            android:id="@+id/pepp2"
+            android:id="@+id/lapp2"
             android:layout_width="130dp"
             android:layout_height="70dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="65dp"
             android:gravity="bottom"
-            android:layout_toRightOf="@id/sciencepp2"
+            android:layout_toRightOf="@id/eapp2"
             android:background="@drawable/rectangle_btn"
-            android:text="pe"
+            android:text="Language Activities"
             app:backgroundTint="@null"/>
         <androidx.cardview.widget.CardView
-            android:id="@+id/agriculturePP2"
+            android:id="@+id/raPP2"
             android:layout_width="130dp"
             android:layout_height="70dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="65dp"
             android:gravity="bottom"
-            android:layout_toRightOf="@id/pepp2"
+            android:layout_toRightOf="@id/lapp2"
             app:cardCornerRadius="9dp"
             ><LinearLayout
         android:layout_width="match_parent"
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ss/cre"
+                android:text="CRE"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="5dp"

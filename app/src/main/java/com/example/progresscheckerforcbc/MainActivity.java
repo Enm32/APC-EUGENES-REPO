@@ -1,10 +1,8 @@
 package com.example.progresscheckerforcbc;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +11,6 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.progresscheckerforcbc.grade1_material.grade1activity;
 import com.example.progresscheckerforcbc.grade2_material.g2activity;
@@ -27,9 +22,7 @@ import com.example.progresscheckerforcbc.grade7_material.g7;
 import com.example.progresscheckerforcbc.grade8_material.g8;
 import com.example.progresscheckerforcbc.grade9_material.g9;
 import com.example.progresscheckerforcbc.pp1_material.pp1activity;
-import com.example.progresscheckerforcbc.pp2_material.englishpp2frag;
 import com.example.progresscheckerforcbc.pp2_material.pp2activity;
-import com.example.progresscheckerforcbc.pp3_material.pp3activity;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
