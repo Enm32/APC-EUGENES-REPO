@@ -10,20 +10,26 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import progress_checker.progress_checker.entities.students;
+import progress_checker.progress_checker.entities.teachers;
 import progress_checker.progress_checker.repositories.studentsRepo;
+import progress_checker.progress_checker.repositories.teachersRepo;
 
 @Service 
 public class UserDetailsServiceImpl implements UserDetailsService  {
     @Autowired
     private studentsRepo userRepository;
-
+    @Autowired
+    private teachersRepo teachers_repository;
   
    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
        students user = userRepository.findByStudentname(username).orElse(null);
         if (user == null) {
-            throw new UsernameNotFoundException("User not found");
-        }
+            // throw new UsernameNotFoundException("User not found");
+            teachers teacher=teachers_repository.findByTeachername(username).orElse(null);
+}else{
+    throw new UsernameNotFoundException("User not found");
+}
         //;
         return User.builder()
                 .username(username)

@@ -3,6 +3,7 @@ package progress_checker.progress_checker.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import progress_checker.progress_checker.entities.subjects;
 import progress_checker.progress_checker.entities.teachers;
 import progress_checker.progress_checker.request_models.teacher_sign_up;
+import progress_checker.progress_checker.response_models.signUpresponse;
 import progress_checker.progress_checker.services.subjectService;
 import progress_checker.progress_checker.services.teacherService;
 
@@ -24,7 +26,7 @@ teacherService ts;
 subjectService ssc;
 
 @PostMapping("/addTeacher")
-public String teacher_signup(@RequestBody teacher_sign_up tsu){
+public ResponseEntity<signUpresponse> teacher_signup(@RequestBody teacher_sign_up tsu){
        List<String> sbd=tsu.getT_subjects();
        List<subjects> sdcv=ssc.getsubs(sbd);
 
@@ -41,7 +43,8 @@ for (subjects subjects : sdcv) {
  //subjects scss=ssc.get_subject(sbd.getFirst());
 
 
-return "success";
+signUpresponse srp=signUpresponse.builder().message("success").build();
+   return ResponseEntity.status(200).body(srp);
 }
 
 

@@ -53,7 +53,7 @@ public class SecurityConfig {
                   //    })
                  authorizeHttpRequests(auth -> {
               auth
-                      .requestMatchers("/auth/**","/addStudent","/addTeacher","/send_otp","/verify_otp").permitAll()
+                      .requestMatchers("/auth/**","/addStudent","/addTeacher","/send_otp","/verify_otp","/new_grade","/addsubject").permitAll()
                       .anyRequest().authenticated();
           })
                   .sessionManagement(httpSecuritySessionManagementConfigurer -> {
