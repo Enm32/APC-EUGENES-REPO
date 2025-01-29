@@ -10,12 +10,12 @@
         android:id="@+id/ttvlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/enter_email_to_receive_otp_code"
+        android:text="An OTP code has been sent to your email"
         android:layout_marginTop="45dp"
         android:layout_marginStart="60dp"
         android:fontFamily="sans-serif-condensed"
-        android:textSize="40sp"
-        android:textStyle="bold"/>
+        android:textSize="30sp"
+        android:textStyle="normal"/>
     <LinearLayout
         android:id="@+id/kldhdj"
         android:layout_width="wrap_content"
@@ -42,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/kldhdj"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="50dp"
         android:text="@string/send_otp"/>
     <Button
@@ -54,6 +55,12 @@
         android:layout_marginStart="70dp"
         android:text="@string/verify"/>
 
-
+    <ProgressBar
+        android:id="@+id/pb_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>

@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -89,7 +90,8 @@ public class Pe extends Fragment {
             Spinner jkm =getView().findViewById(R.id.hafSpinner);
             Spinner mnb =getView().findViewById(R.id.firstaidSpinner);
             Spinner mlb =getView().findViewById(R.id.Outdoorsp);
-
+            CryptoManager mnjk=new CryptoManager(getContext());
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
@@ -106,7 +108,7 @@ public class Pe extends Fragment {
                         kadm.setTopic("Games and sports");
                         kadm.setSubject("PE "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -126,7 +128,7 @@ public class Pe extends Fragment {
                         kadm.setTopic("Swimming");
                         kadm.setSubject("PE "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -146,7 +148,7 @@ public class Pe extends Fragment {
                         kadm.setTopic("Gymnastics");
                         kadm.setSubject("PE "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -166,7 +168,7 @@ public class Pe extends Fragment {
                         kadm.setTopic("Health and fitness");
                         kadm.setSubject("PE "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -186,7 +188,7 @@ public class Pe extends Fragment {
                         kadm.setTopic("First aid in sports");
                         kadm.setSubject("PE "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -206,7 +208,7 @@ public class Pe extends Fragment {
                         kadm.setTopic("Outdoor activities");
                         kadm.setSubject("PE "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -221,8 +223,8 @@ public class Pe extends Fragment {
         }
     }
 
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);

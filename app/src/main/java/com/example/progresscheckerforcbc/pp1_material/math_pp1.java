@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -69,6 +70,11 @@ public class math_pp1 extends Fragment {
             Spinner sp2=getView().findViewById(R.id.numberingpp1_sp);
             Spinner sp3=getView().findViewById(R.id.measurementpp1Spinner);
             Spinner sp4=getView().findViewById(R.id.geometrypp1_Spinner);
+            CryptoManager mnjk=new CryptoManager(getContext());
+
+
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
+
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model kadm=new add_rating_model();
@@ -84,7 +90,7 @@ public class math_pp1 extends Fragment {
                         kadm.setTopic("Pre-Numbering Activity");
                         kadm.setSubject("Mathematics Activities pp1");
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -104,7 +110,7 @@ public class math_pp1 extends Fragment {
                         kadm.setTopic("Numbering");
                         kadm.setSubject("Mathematics Activities pp1");
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -124,7 +130,7 @@ public class math_pp1 extends Fragment {
                         kadm.setTopic("Measurement");
                         kadm.setSubject("Mathematics Activities pp1");
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -144,7 +150,7 @@ public class math_pp1 extends Fragment {
                         kadm.setTopic("Geometry");
                         kadm.setSubject("Mathematics Activities pp1");
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -161,11 +167,11 @@ public class math_pp1 extends Fragment {
         }
     }
 
-    private void makeRating(add_rating_model m,add_rating_api n,ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
-              o.setVisibility(View.GONE);
+                o.setVisibility(View.GONE);
                 Toast.makeText(getContext(),"success",Toast.LENGTH_SHORT).show();
             }
 

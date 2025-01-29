@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -68,6 +69,12 @@ public class language_act_pp1 extends Fragment {
             Spinner la2 =getView().findViewById(R.id.Readingspinner);
             Spinner la3 =getView().findViewById(R.id.WritingSpinner);
 
+
+            CryptoManager mnjk=new CryptoManager(getContext());
+
+
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
+
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model lnn =new add_rating_model();
@@ -83,7 +90,7 @@ public class language_act_pp1 extends Fragment {
                         lnn.setTopic("Listening and Speaking");
                         lnn.setSubject("Language Activities pp1");
                         lnn.setTopic_rating(item);
-                        makeRating(lnn,ada, ln);
+                        makeRating(lnn,ada, ln,tok);
                     }
                 }
 
@@ -103,7 +110,7 @@ public class language_act_pp1 extends Fragment {
                         lnn.setTopic("Reading");
                         lnn.setSubject("Language Activities pp1");
                         lnn.setTopic_rating(item);
-                        makeRating(lnn,ada, ln);
+                        makeRating(lnn,ada, ln,tok);
                     }
                 }
 
@@ -123,7 +130,7 @@ public class language_act_pp1 extends Fragment {
                         lnn.setTopic("Writing");
                         lnn.setSubject("Language Activities pp1");
                         lnn.setTopic_rating(item);
-                        makeRating(lnn,ada, ln);
+                        makeRating(lnn,ada, ln,tok);
                     }
                 }
 
@@ -141,8 +148,8 @@ public class language_act_pp1 extends Fragment {
             Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
         }
     }
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);
