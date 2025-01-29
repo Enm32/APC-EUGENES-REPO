@@ -19,7 +19,7 @@ hn.postDelayed(() -> {
     SharedPreferences shred_preferences=getSharedPreferences("Status",MODE_PRIVATE);
     String state=shred_preferences.getString("mode","");
     if(!state.equals("verified")){
-        Intent i = new Intent(getApplicationContext(), otLogin.class);
+        Intent i = new Intent(getApplicationContext(), signup.class);
 
         startActivity(i);
         finish();

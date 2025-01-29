@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".subjectSelection">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/creativeactivities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creative activities"
+            android:layout_marginTop="50dp"
+            />
+        <Spinner
+            android:id="@+id/tv1spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Grades"
+            android:layout_toRightOf="@id/creativeactivities"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="47dp"/>
+
+        <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Language activities"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/creativeactivities"
+        />
+        <Spinner
+            android:id="@+id/tv2spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Grades"
+            android:layout_toRightOf="@id/tv2"
+            android:layout_below="@id/tv1spinner"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"/>
+
+
+
+        <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Environmental activities"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv2"
+        />
+        <Spinner
+            android:id="@+id/tv3spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Grades"
+            android:layout_toRightOf="@id/tv3"
+            android:layout_below="@id/tv2spinner"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+
+         <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Religious activities"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv3"
+        />
+        <Spinner
+            android:id="@+id/tv4spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Grades"
+            android:layout_toRightOf="@id/tv4"
+            android:layout_below="@id/tv3spinner"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mathematics activities"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tv4"
+            />
+        <Spinner
+            android:id="@+id/tv5spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Grades"
+            android:layout_toRightOf="@id/tv5"
+            android:layout_below="@id/tv4spinner"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"/>
+
+<LinearLayout
+    android:id="@+id/ll1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/tv5"
+    android:layout_marginTop="20dp">
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agriculture"
+        android:layout_gravity="bottom"
+        />
+    <Spinner
+        android:id="@+id/tv6spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/Grades"
+        android:layout_gravity="end"
+        android:layout_marginStart="20dp"
+       />
+</LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll1"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arts and craft"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv7spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll2"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home science"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv8spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll3"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hygiene"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv9spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll4"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv10spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll5"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PE"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv11spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll6"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pretechnical studies"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv12spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll7"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="science"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv13spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll8"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social studies"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv14spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll9"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visual arts"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv15spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll10"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv16spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll11"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/tv17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kiswahili"
+                android:layout_gravity="bottom"
+                />
+            <Spinner
+                android:id="@+id/tv17spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Grades"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                />
+        </LinearLayout>
+<Button
+    android:id="@+id/completeSignup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Complete"
+    android:layout_below="@id/ll12"
+    android:layout_marginTop="25dp"
+    android:layout_centerHorizontal="true"/>
+<ProgressBar
+    android:id="@+id/sPb"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:visibility="gone"
+    />
+    </RelativeLayout>
+</ScrollView>

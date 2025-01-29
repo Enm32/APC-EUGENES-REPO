@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -77,6 +78,8 @@ public class visual_arts_jss extends Fragment {
             Spinner j =getView().findViewById(R.id.cpcasspinner);
             Spinner k =getView().findViewById(R.id.appreciationSpinner);
 
+            CryptoManager mnjk=new CryptoManager(getContext());
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
 
             retrofit_service rs=new retrofit_service();
@@ -95,7 +98,7 @@ public class visual_arts_jss extends Fragment {
                         kadm.setTopic("Foundations of Creative Arts and Sports");
                         kadm.setSubject("Visual arts "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -117,7 +120,7 @@ public class visual_arts_jss extends Fragment {
                         kadm.setTopic("CCreating and Performing in Creative arts");
                         kadm.setSubject("Visual arts "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -137,7 +140,7 @@ public class visual_arts_jss extends Fragment {
                         kadm.setTopic("Appreciation in Creative Arts and Sports");
                         kadm.setSubject("Visual arts "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -156,8 +159,8 @@ public class visual_arts_jss extends Fragment {
         }
     }
 
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);

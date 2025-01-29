@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pp1_material.language_act_pp1">
-
+    xmlns:tools="http://schemas.android.com/tools">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +19,7 @@
         >
 
         <Spinner
-            android:id="@+id/las_Spinner"
+            android:id="@+id/laspp2_Spinner"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -61,7 +59,7 @@
         >
 
         <Spinner
-            android:id="@+id/Readingspinner"
+            android:id="@+id/Readingpp2spinner"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -101,7 +99,7 @@
         >
 
         <Spinner
-            android:id="@+id/WritingSpinner"
+            android:id="@+id/Writingpp2Spinner"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -121,7 +119,7 @@
 
 
     <ProgressBar
-        android:id="@+id/idLoadingPBlapp2"
+        android:id="@+id/idLoadingPBlapp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

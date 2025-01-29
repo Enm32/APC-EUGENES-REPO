@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -72,7 +73,8 @@ public class Environmental extends Fragment {
             Spinner k =getView().findViewById(R.id.se_spinner);
             Spinner jnm =getView().findViewById(R.id.cfe_Spinner);
 
-
+            CryptoManager mnjk=new CryptoManager(getContext());
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
@@ -89,7 +91,7 @@ public class Environmental extends Fragment {
                         kadm.setTopic("Environment and its resources");
                         kadm.setSubject("Environmental activities "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -109,7 +111,7 @@ public class Environmental extends Fragment {
                         kadm.setTopic("Social environment");
                         kadm.setSubject("Environmental activities "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -129,7 +131,7 @@ public class Environmental extends Fragment {
                         kadm.setTopic("Care for the environment");
                         kadm.setSubject("Environmental activities "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -146,8 +148,8 @@ public class Environmental extends Fragment {
         }
     }
 
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);

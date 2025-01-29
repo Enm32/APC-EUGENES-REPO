@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -75,6 +76,10 @@ public class Pretechnicalstudies extends Fragment {
             Spinner k4=getView().findViewById(R.id.tap);
             Spinner k5=getView().findViewById(R.id.Entrepr);
 
+            CryptoManager mnjk=new CryptoManager(getContext());
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
+
+
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model kadm=new add_rating_model();
@@ -90,7 +95,7 @@ public class Pretechnicalstudies extends Fragment {
                         kadm.setTopic("Foundations of PT studies");
                         kadm.setSubject("Pre-Technical Studies "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -110,7 +115,7 @@ public class Pretechnicalstudies extends Fragment {
                         kadm.setTopic("communication in PT studies");
                         kadm.setSubject("Pre-Technical Studies "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -130,7 +135,7 @@ public class Pretechnicalstudies extends Fragment {
                         kadm.setTopic("Materials for production");
                         kadm.setSubject("Pre-Technical Studies "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -150,7 +155,7 @@ public class Pretechnicalstudies extends Fragment {
                         kadm.setTopic("Tools and Production");
                         kadm.setSubject("Pre-Technical Studies "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -170,7 +175,7 @@ public class Pretechnicalstudies extends Fragment {
                         kadm.setTopic("Entrepreneurship");
                         kadm.setSubject("Pre-Technical Studies "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -187,8 +192,8 @@ public class Pretechnicalstudies extends Fragment {
     }
 
 
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);

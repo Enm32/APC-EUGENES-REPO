@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -74,6 +75,10 @@ public class environmental_fragment extends Fragment {
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model gn =new add_rating_model();
+            CryptoManager mnjk=new CryptoManager(getContext());
+
+
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
             ea1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -86,7 +91,7 @@ public class environmental_fragment extends Fragment {
                         gn.setTopic("Myself");
                         gn.setSubject("Environmental Activities pp1");
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -106,7 +111,7 @@ public class environmental_fragment extends Fragment {
                         gn.setTopic("My home");
                         gn.setSubject("Environmental Activities pp1");
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -126,7 +131,7 @@ public class environmental_fragment extends Fragment {
                         gn.setTopic("My school");
                         gn.setSubject("Environmental Activities pp1");
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -146,7 +151,7 @@ public class environmental_fragment extends Fragment {
                         gn.setTopic("My family");
                         gn.setSubject("Environmental Activities pp1");
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -166,7 +171,7 @@ public class environmental_fragment extends Fragment {
                         gn.setTopic("My family");
                         gn.setSubject("Environmental Activities pp1");
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -182,8 +187,8 @@ public class environmental_fragment extends Fragment {
         }
 
     }
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);

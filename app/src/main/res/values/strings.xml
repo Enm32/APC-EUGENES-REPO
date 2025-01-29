@@ -13,6 +13,20 @@
 
 
     </string-array>
+    <string-array name="Grades">
+        <item>Select a grade</item>
+        <item>PP1</item>
+        <item>PP2</item>
+        <item>Grade1</item>
+        <item>Grade2</item>
+        <item>Grade3</item>
+        <item>Grade4</item>
+        <item>Grade5</item>
+        <item>Grade6</item>
+        <item>Grade7</item>
+        <item>Grade8</item>
+        <item>Grade9</item>
+    </string-array>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_splash_screen">splashScreen</string>
     <string name="title_activity_one_time_login">one_time_LoginActivity</string>

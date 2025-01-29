@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -74,6 +75,10 @@ public class Cre_upper extends Fragment {
             Spinner ra3 =getView().findViewById(R.id.TheBiblenspinner);
             Spinner ra4 =getView().findViewById(R.id.CValuesnSpinner);
             Spinner ra5 =getView().findViewById(R.id.ChurchnSpinner);
+
+            CryptoManager mnjk=new CryptoManager(getContext());
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
+
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model gn =new add_rating_model();
@@ -89,7 +94,7 @@ public class Cre_upper extends Fragment {
                         gn.setTopic("Creation");
                         gn.setSubject("Religious Activities "+ grade);
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -109,7 +114,7 @@ public class Cre_upper extends Fragment {
                         gn.setTopic("Life of Jesus");
                         gn.setSubject("Religious Activities "+ grade);
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -129,7 +134,7 @@ public class Cre_upper extends Fragment {
                         gn.setTopic("The bible");
                         gn.setSubject("Religious Activities "+ grade);
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -149,7 +154,7 @@ public class Cre_upper extends Fragment {
                         gn.setTopic("Christian values");
                         gn.setSubject("Religious Activities "+ grade);
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -169,7 +174,7 @@ public class Cre_upper extends Fragment {
                         gn.setTopic("The church");
                         gn.setSubject("Religious Activities "+ grade);
                         gn.setTopic_rating(item);
-                        makeRating(gn,ada, kk_pb);
+                        makeRating(gn,ada, kk_pb,tok);
                     }
                 }
 
@@ -184,8 +189,8 @@ public class Cre_upper extends Fragment {
             Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
         }
     }
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);

@@ -1,6 +1,7 @@
 package com.example.progresscheckerforcbc.retrofit;
 
 import com.example.progresscheckerforcbc.model.otpResponse;
+import com.example.progresscheckerforcbc.model.tokenresponse;
 
 import retrofit2.Call;
 import retrofit2.http.POST;
@@ -13,5 +14,6 @@ public interface otp_verification {
 
     @POST("/verify_otp")
      Call<otpResponse> verifyOtp(@Query("code") String code);
-
+    @POST("/auth/get_token")
+    Call<tokenresponse> token_gen(@Query("username") String username);
 }

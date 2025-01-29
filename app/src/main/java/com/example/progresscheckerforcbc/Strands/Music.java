@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.progresscheckerforcbc.CryptoManager;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -74,7 +75,8 @@ public class Music extends Fragment {
             Spinner knmm =getView().findViewById(R.id.Performingspinner);
             Spinner jnjkm =getView().findViewById(R.id.Creating_musicSpinner);
 
-
+            CryptoManager mnjk=new CryptoManager(getContext());
+            String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
@@ -91,7 +93,7 @@ public class Music extends Fragment {
                         kadm.setTopic("Listening, Responding and appreciation");
                         kadm.setSubject("Music "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -111,7 +113,7 @@ public class Music extends Fragment {
                         kadm.setTopic("Performing");
                         kadm.setSubject("Music "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -131,7 +133,7 @@ public class Music extends Fragment {
                         kadm.setTopic("Creating Music");
                         kadm.setSubject("Music "+ grade);
                         kadm.setTopic_rating(item);
-                        makeRating(kadm,ada,pb);
+                        makeRating(kadm,ada,pb,tok);
                     }
                 }
 
@@ -148,8 +150,8 @@ public class Music extends Fragment {
         }
     }
 
-    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o){
-        n.addRating(m).enqueue(new Callback<rating_response>() {
+    private void makeRating(add_rating_model m, add_rating_api n, ProgressBar o,String auth){
+        n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
                 o.setVisibility(View.GONE);
