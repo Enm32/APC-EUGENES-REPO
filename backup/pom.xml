@@ -11,6 +11,7 @@
 	<groupId>progress_checker</groupId>
 	<artifactId>progress_checker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>progress_checker</name>
 	<description>Project for cbc</description>
 	<url/>
