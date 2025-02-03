@@ -1,4 +1,4 @@
-# Created at 2025-02-03T15:27:20.414
+# Created at 2025-02-03T18:32:37.167
 Boot Manifest-JAR contains absolute paths in classpath 'D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root
