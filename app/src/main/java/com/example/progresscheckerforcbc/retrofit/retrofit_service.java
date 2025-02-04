@@ -17,7 +17,7 @@ public class retrofit_service {
     }
     private void  startRetrofit(){
         retrofit= new Retrofit.Builder()
-                .baseUrl("http://192.168.76.53:8080")
+                .baseUrl("https://apc-eugenes-repo.onrender.com")
                 .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .build();
     }
