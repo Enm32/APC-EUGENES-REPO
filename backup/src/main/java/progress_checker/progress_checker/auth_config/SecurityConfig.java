@@ -48,7 +48,7 @@ public class SecurityConfig {
                   //    })
                  authorizeHttpRequests(auth -> {
               auth
-                      .requestMatchers("/auth/**","/addStudent","/addTeacher","/send_otp","/verify_otp","/new_grade","/addsubject").permitAll()
+                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject").permitAll()
                       .anyRequest().authenticated();
           })
                   .sessionManagement(httpSecuritySessionManagementConfigurer -> {

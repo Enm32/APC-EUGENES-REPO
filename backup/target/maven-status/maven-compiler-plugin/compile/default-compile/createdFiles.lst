@@ -15,10 +15,14 @@ progress_checker\progress_checker\auth_config\SecurityConfig.class
 progress_checker\progress_checker\repositories\subjectsRepo.class
 progress_checker\progress_checker\entities\subjects.class
 progress_checker\progress_checker\services\gradeService.class
+progress_checker\progress_checker\request_models\NotificationRequest.class
 progress_checker\progress_checker\repositories\ratingsRepo.class
+progress_checker\progress_checker\response_models\NotificationResponse.class
 progress_checker\progress_checker\services\subjectService.class
 progress_checker\progress_checker\response_models\signUpresponse.class
 progress_checker\progress_checker\controllers\subjectsController.class
+progress_checker\progress_checker\services\FCMInitializer.class
+progress_checker\progress_checker\services\FCMService.class
 progress_checker\progress_checker\response_models\tokenresponse.class
 progress_checker\progress_checker\controllers\teachers_controller.class
 progress_checker\progress_checker\auth_config\JwtService.class
@@ -38,6 +42,7 @@ progress_checker\progress_checker\controllers\gradecontroller.class
 progress_checker\progress_checker\entities\teachers$teachersBuilder.class
 progress_checker\progress_checker\services\ratingService.class
 progress_checker\progress_checker\auth_config\JwtAuthenticationFilter.class
+progress_checker\progress_checker\controllers\NotificationController.class
 progress_checker\progress_checker\entities\gradeclasses.class
 progress_checker\progress_checker\repositories\otpRepo.class
 progress_checker\progress_checker\entities\ratings$ratingsBuilder.class
