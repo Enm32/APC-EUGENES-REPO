@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import progress_checker.progress_checker.auth_config.JwtService;
+import progress_checker.progress_checker.auth_config.studentsAuthenticationManager;
 import progress_checker.progress_checker.entities.gradeclasses;
 import progress_checker.progress_checker.entities.students;
 import progress_checker.progress_checker.request_models.studentSignup;
+import progress_checker.progress_checker.response_models.NotificationResponse;
 import progress_checker.progress_checker.response_models.otpResponse;
 import progress_checker.progress_checker.response_models.signUpresponse;
 import progress_checker.progress_checker.response_models.tokenresponse;
@@ -35,7 +37,7 @@ public class students_controller {
 @Autowired
 studentService ss;
   @Autowired
-    private AuthenticationManager authenticationManager;
+    private studentsAuthenticationManager authenticationManager;
 
     @Autowired
     private JwtService jwtService;
@@ -76,5 +78,10 @@ public String getact() {
     UserDetails userDetails = (UserDetails) authentication.getPrincipal();
     return userDetails.getUsername();
 }
+@GetMapping("/getNotifToken")
+public ResponseEntity<NotificationResponse> getNotificationtoken(@RequestParam String studentName) {
+    return ss.get_notifToken(studentName);
+}
+
 
 }

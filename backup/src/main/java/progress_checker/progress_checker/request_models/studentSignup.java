@@ -16,4 +16,5 @@ private String parent_name;
 private String studentGrade;
 private String parentPhone;
 private String emailAddress;
+private String notif_token;
 }

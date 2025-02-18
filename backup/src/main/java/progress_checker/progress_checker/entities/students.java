@@ -28,6 +28,9 @@ private String student_name;
 private String parent_name;
 @JsonIgnore
 private String emailAddress;
+@JsonIgnore
+private String notificationToken;
+
 @ManyToOne
 @JsonIgnore
 private gradeclasses studentGrade;

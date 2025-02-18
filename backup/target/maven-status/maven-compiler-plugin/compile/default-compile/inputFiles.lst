@@ -1,7 +1,12 @@
 D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\JwtAuthenticationFilter.java
 D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\JwtService.java
 D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\SecurityConfig.java
-D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\UserDetailsServiceImpl.java
+D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\students_detailService.java
+D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\studentsAuthenticationManager.java
+D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\teacher_detailService.java
+D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\teacher_UserDetails.java
+D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\teacherAuthenticationManager.java
+D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\auth_config\Userdetails.java
 D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\controllers\emailController.java
 D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\controllers\gradecontroller.java
 D:\PROGRESS_CHECKER\APC-EUGENES-REPO\backup\src\main\java\progress_checker\progress_checker\controllers\NotificationController.java

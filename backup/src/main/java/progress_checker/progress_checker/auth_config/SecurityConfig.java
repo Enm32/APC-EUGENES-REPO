@@ -4,8 +4,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -25,8 +29,10 @@ public class SecurityConfig {
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
-    private UserDetailsServiceImpl userDetailsService;
+    private students_detailService userDetailsService;
 
+    @Autowired
+    private teacher_detailService tsc;
     
 
 
@@ -48,7 +54,7 @@ public class SecurityConfig {
                   //    })
                  authorizeHttpRequests(auth -> {
               auth
-                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject").permitAll()
+                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject","/teachers/auth/get_token").permitAll()
                       .anyRequest().authenticated();
           })
                   .sessionManagement(httpSecuritySessionManagementConfigurer -> {
@@ -70,13 +76,73 @@ public class SecurityConfig {
            return NoOpPasswordEncoder.getInstance();
         }
     
+    // @Primary
+    // @Bean
+    // public AuthenticationManager student_authenticationManager(HttpSecurity http,PasswordEncoder passwordEncoder , students_detailService userDetailsService) throws Exception {
+    //     return http.getSharedObject(AuthenticationManagerBuilder.class)
+    //             .userDetailsService(userDetailsService)
+    //               .passwordEncoder(passwordEncoder)
+    //             .and()
+    //             .build();
+    // }
 
-    @Bean
-    public AuthenticationManager authenticationManager(HttpSecurity http,PasswordEncoder passwordEncoder , UserDetailsServiceImpl userDetailsService) throws Exception {
-        return http.getSharedObject(AuthenticationManagerBuilder.class)
-                .userDetailsService(userDetailsService)
-                  .passwordEncoder(passwordEncoder)
-                .and()
-                .build();
+  
+    // @Bean
+    // public AuthenticationManager teacher_authenticationManager(HttpSecurity http,PasswordEncoder passwordEncoder , teacher_detailService tscc) throws Exception {
+    //     return http.getSharedObject(AuthenticationManagerBuilder.class)
+    //             .userDetailsService(tscc)
+    //               .passwordEncoder(passwordEncoder)
+    //             .and()
+    //             .build();
+    // }
+
+  
+   @Bean
+   public AuthenticationProvider studentAuthenticationProvider(){
+       DaoAuthenticationProvider authenticationProvider=new DaoAuthenticationProvider();
+       authenticationProvider.setUserDetailsService(userDetailsService);
+       authenticationProvider.setPasswordEncoder(passwordEncoder());
+       return authenticationProvider;
+   }
+
+
+    
+  
+    
+    @Primary
+    @Bean()
+    public AuthenticationProvider teacherAuthenticationProvider(){
+        DaoAuthenticationProvider tauthenticationProvider=new DaoAuthenticationProvider();
+        tauthenticationProvider.setUserDetailsService(tsc);
+        tauthenticationProvider.setPasswordEncoder(passwordEncoder());
+        return tauthenticationProvider;
     }
+
+
+
+
+
+  
+    @Bean(name ="enf")
+    public studentsAuthenticationManager students_AuthenticationManager(AuthenticationConfiguration authenticationConfiguration)
+            throws Exception {
+        return new studentsAuthenticationManager(studentAuthenticationProvider());
+    }
+
+    @Primary
+    @Bean(name="prov")
+    public teacherAuthenticationManager teachers_AuthenticationManager(AuthenticationConfiguration authenticationConfiguration)
+            throws Exception {
+        return new teacherAuthenticationManager(teacherAuthenticationProvider());
+    }
+
+
+
+
+
+
+
+
+
+
 }
