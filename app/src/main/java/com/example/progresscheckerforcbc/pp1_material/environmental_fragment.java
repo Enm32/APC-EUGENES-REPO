@@ -89,7 +89,7 @@ public class environmental_fragment extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Myself");
-                        gn.setSubject("Environmental Activities pp1");
+                        gn.setSubject("Environmental Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -109,7 +109,7 @@ public class environmental_fragment extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My home");
-                        gn.setSubject("Environmental Activities pp1");
+                        gn.setSubject("Environmental Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -129,7 +129,7 @@ public class environmental_fragment extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My school");
-                        gn.setSubject("Environmental Activities pp1");
+                        gn.setSubject("Environmental Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -149,7 +149,7 @@ public class environmental_fragment extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My family");
-                        gn.setSubject("Environmental Activities pp1");
+                        gn.setSubject("Environmental Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -169,7 +169,7 @@ public class environmental_fragment extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My family");
-                        gn.setSubject("Environmental Activities pp1");
+                        gn.setSubject("Environmental Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }

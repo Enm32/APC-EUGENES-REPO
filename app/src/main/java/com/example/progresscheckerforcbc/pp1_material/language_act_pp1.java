@@ -88,7 +88,7 @@ public class language_act_pp1 extends Fragment {
                         ln.setVisibility(View.VISIBLE);
                         lnn.setStudent_name(mParam1);
                         lnn.setTopic("Listening and Speaking");
-                        lnn.setSubject("Language Activities pp1");
+                        lnn.setSubject("Language Activities PP1");
                         lnn.setTopic_rating(item);
                         makeRating(lnn,ada, ln,tok);
                     }
@@ -108,7 +108,7 @@ public class language_act_pp1 extends Fragment {
                         ln.setVisibility(View.VISIBLE);
                         lnn.setStudent_name(mParam1);
                         lnn.setTopic("Reading");
-                        lnn.setSubject("Language Activities pp1");
+                        lnn.setSubject("Language Activities PP1");
                         lnn.setTopic_rating(item);
                         makeRating(lnn,ada, ln,tok);
                     }
@@ -128,7 +128,7 @@ public class language_act_pp1 extends Fragment {
                         ln.setVisibility(View.VISIBLE);
                         lnn.setStudent_name(mParam1);
                         lnn.setTopic("Writing");
-                        lnn.setSubject("Language Activities pp1");
+                        lnn.setSubject("Language Activities PP1");
                         lnn.setTopic_rating(item);
                         makeRating(lnn,ada, ln,tok);
                     }

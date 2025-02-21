@@ -95,7 +95,7 @@ public class otLogin extends AppCompatActivity {
                             if (Objects.equals(response.body().getMessage(), "verification failed")) {
                                 Toast.makeText(otLogin.this, "wrong code", Toast.LENGTH_SHORT).show();
                             } else {
-                                otp_api.token_gen(username).enqueue(new Callback<tokenresponse>() {
+                                otp_api.token_gen(username.toString()).enqueue(new Callback<tokenresponse>() {
                                         @Override
                                         public void onResponse(Call<tokenresponse> call, Response<tokenresponse> response) {
                                             try {

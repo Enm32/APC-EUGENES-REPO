@@ -88,7 +88,7 @@ public class math_pp1 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Pre-Numbering Activity");
-                        kadm.setSubject("Mathematics Activities pp1");
+                        kadm.setSubject("Mathematics PP1");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
                     }
@@ -108,7 +108,7 @@ public class math_pp1 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Numbering");
-                        kadm.setSubject("Mathematics Activities pp1");
+                        kadm.setSubject("Mathematics PP1");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
                     }
@@ -128,7 +128,7 @@ public class math_pp1 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Measurement");
-                        kadm.setSubject("Mathematics Activities pp1");
+                        kadm.setSubject("Mathematics PP1");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
                     }
@@ -148,7 +148,7 @@ public class math_pp1 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Geometry");
-                        kadm.setSubject("Mathematics Activities pp1");
+                        kadm.setSubject("Mathematics PP1");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
                     }

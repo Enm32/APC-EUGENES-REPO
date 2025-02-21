@@ -15,7 +15,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.progresscheckerforcbc.CryptoManager;
+import com.example.progresscheckerforcbc.NotificationHandler;
 import com.example.progresscheckerforcbc.R;
+import com.example.progresscheckerforcbc.model.NotificationResponse;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
 import com.example.progresscheckerforcbc.retrofit.add_rating_api;
@@ -29,6 +31,8 @@ import retrofit2.Response;
 public class creativeActpp2 extends Fragment {
 
     private String mParam1;
+
+
 
     public creativeActpp2() {
 
@@ -78,7 +82,7 @@ public class creativeActpp2 extends Fragment {
 
 
             String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
-
+            NotificationHandler ndh=new NotificationHandler(tok,mParam1);
 
 
             cka1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -90,9 +94,10 @@ public class creativeActpp2 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("Myself");
-                        mnn.setSubject("Creative Activities pp1");
+                        mnn.setSubject("Creative Activities PP2");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -110,9 +115,10 @@ public class creativeActpp2 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("My home");
-                        mnn.setSubject("Creative Activities pp2");
+                        mnn.setSubject("Creative Activities PP2");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -130,9 +136,10 @@ public class creativeActpp2 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("My school");
-                        mnn.setSubject("Creative Activities pp2");
+                        mnn.setSubject("Creative Activities PP2");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -150,9 +157,10 @@ public class creativeActpp2 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("My family");
-                        mnn.setSubject("Creative Activities pp2");
+                        mnn.setSubject("Creative Activities PP2");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -173,6 +181,7 @@ public class creativeActpp2 extends Fragment {
         n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
+
                 o.setVisibility(View.GONE);
                 Toast.makeText(getContext(),"success",Toast.LENGTH_SHORT).show();
             }
@@ -183,5 +192,7 @@ public class creativeActpp2 extends Fragment {
                 Toast.makeText(getContext(),throwable.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
+
     }
+
 }

@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.progresscheckerforcbc.CryptoManager;
+import com.example.progresscheckerforcbc.NotificationHandler;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -77,7 +78,7 @@ public class religiousActpp2 extends Fragment {
             CryptoManager mnjk=new CryptoManager(getContext());
             String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
-
+            NotificationHandler ndh=new NotificationHandler(tok,mParam1);
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model gn =new add_rating_model();
@@ -91,9 +92,10 @@ public class religiousActpp2 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Creation");
-                        gn.setSubject("Religious Activities pp2");
+                        gn.setSubject("Religious Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        NotificationHandler ndh=new NotificationHandler(tok,mParam1);
                     }
                 }
 
@@ -111,9 +113,10 @@ public class religiousActpp2 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Life of Jesus");
-                        gn.setSubject("Religious Activities pp2");
+                        gn.setSubject("Religious Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -131,9 +134,10 @@ public class religiousActpp2 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("The bible");
-                        gn.setSubject("Religious Activities pp2");
+                        gn.setSubject("Religious Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -151,9 +155,10 @@ public class religiousActpp2 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Christian values");
-                        gn.setSubject("Religious Activities pp2");
+                        gn.setSubject("Religious Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -171,9 +176,10 @@ public class religiousActpp2 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("The church");
-                        gn.setSubject("Religious Activities pp2");
+                        gn.setSubject("Religious Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 

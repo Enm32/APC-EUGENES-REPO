@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.progresscheckerforcbc.CryptoManager;
+import com.example.progresscheckerforcbc.NotificationHandler;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -71,6 +72,7 @@ public class eapp2frag extends Fragment {
 
 
             String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
+            NotificationHandler ndh=new NotificationHandler(tok,mParam1);
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model gn =new add_rating_model();
@@ -84,9 +86,10 @@ public class eapp2frag extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Myself");
-                        gn.setSubject("Environmental Activities pp2");
+                        gn.setSubject("Environmental Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -104,9 +107,10 @@ public class eapp2frag extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My home");
-                        gn.setSubject("Environmental Activities pp2");
+                        gn.setSubject("Environmental Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -124,9 +128,10 @@ public class eapp2frag extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My school");
-                        gn.setSubject("Environmental Activities pp2");
+                        gn.setSubject("Environmental Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -144,9 +149,10 @@ public class eapp2frag extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My family");
-                        gn.setSubject("Environmental Activities pp2");
+                        gn.setSubject("Environmental Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -164,9 +170,10 @@ public class eapp2frag extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("My family");
-                        gn.setSubject("Environmental Activities pp2");
+                        gn.setSubject("Environmental Activities PP2");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
