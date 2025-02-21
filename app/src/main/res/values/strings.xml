@@ -2,10 +2,17 @@
     <string name="app_name">Parent_app-APC</string>
     <string name="card_1">Card 1</string>
     <string-array name="Grades">
-        <item>Grade1</item>
+        <item>Grade 1</item>
         <item>Grade 2</item>
         <item>Grade 3</item>
-        <item>GRade 4</item>
+        <item>Grade 4</item>
+        <item>Grade 5</item>
+        <item>Grade 6</item>
+        <item>Grade 7</item>
+        <item>Grade 8</item>
+        <item>Grade 9</item>
+        <item>PP1</item>
+        <item>PP2</item>
 
 
     </string-array>
