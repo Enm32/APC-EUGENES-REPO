@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "276127108086",
+    "project_id": "apc-app-2012c",
+    "storage_bucket": "apc-app-2012c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276127108086:android:6a41eadddba22a96f7d5d7",
+        "android_client_info": {
+          "package_name": "com.example.parents_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8GB4Ktwx_PEP2-gFpTPKV0qg0JyBBO1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,16 +6,19 @@ public class studentSignup {
     private String studentGrade;
     private String parentPhone;
     private String emailAddress;
+    private String notif_token;
+
 
     public studentSignup() {
     }
 
-    public studentSignup(String student_name, String parent_name, String studentGrade, String parentPhone, String emailAddress) {
+    public studentSignup(String student_name, String parent_name, String studentGrade, String parentPhone, String emailAddress, String notif_token) {
         this.student_name = student_name;
         this.parent_name = parent_name;
         this.studentGrade = studentGrade;
         this.parentPhone = parentPhone;
         this.emailAddress = emailAddress;
+        this.notif_token = notif_token;
     }
 
     public String getStudent_name() {
@@ -56,5 +59,13 @@ public class studentSignup {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public String getNotif_token() {
+        return notif_token;
+    }
+
+    public void setNotif_token(String notif_token) {
+        this.notif_token = notif_token;
     }
 }

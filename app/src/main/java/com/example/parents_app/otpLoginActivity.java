@@ -30,7 +30,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class otpLoginActivity extends AppCompatActivity {
-
+    private final static Logger LOGGER =
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,12 +57,14 @@ public class otpLoginActivity extends AppCompatActivity {
             retrofit_service rks = new retrofit_service();
             getRatings otp=rks.getRetrofit().create(getRatings.class);
             bn.setVisibility(View.VISIBLE);
+
             otp.sendOtp(em).enqueue(new Callback<otpResponse>() {
 
                 @Override
                 public void onResponse(Call<otpResponse> call, Response<otpResponse> response) {
                     bn.setVisibility(View.GONE);
                     Toast.makeText(otpLoginActivity.this, response.body().getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(otpLoginActivity.this, nml, Toast.LENGTH_LONG).show();
                 }
 
                 @Override
@@ -93,6 +96,7 @@ public class otpLoginActivity extends AppCompatActivity {
                                  // Toast.makeText(otpLoginActivity.this, response.body().getToken(), Toast.LENGTH_SHORT).show();
                               } catch (Exception e) {
                                   Toast.makeText(otpLoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                  LOGGER.log(Level.SEVERE,"token error",e);
                               }
                           }
 

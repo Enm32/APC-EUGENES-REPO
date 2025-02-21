@@ -11,6 +11,7 @@ retrofit = "2.11.0"
 
 [libraries]
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

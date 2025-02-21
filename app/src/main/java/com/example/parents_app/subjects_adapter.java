@@ -50,7 +50,7 @@ this.subs=su;
 
        holder.rv_ccv.setOnClickListener(v -> {
            Intent newInt = new Intent(context, ratingsActivity.class);
-          newInt.putExtra("student_name",str);
+          newInt.putExtra("subject",str);
            Activity activity = (Activity) context;
            activity.startActivity(newInt);
            activity.overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);;
