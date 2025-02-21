@@ -14,6 +14,6 @@ public interface otp_verification {
 
     @POST("/verify_otp")
      Call<otpResponse> verifyOtp(@Query("code") String code);
-    @POST("/auth/get_token")
+    @POST("/teachers/auth/get_token")
     Call<tokenresponse> token_gen(@Query("username") String username);
 }

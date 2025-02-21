@@ -84,7 +84,7 @@ public class religious_act_pp1 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Creation");
-                        gn.setSubject("Religious Activities pp1");
+                        gn.setSubject("Religious Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -104,7 +104,7 @@ public class religious_act_pp1 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Life of Jesus");
-                        gn.setSubject("Religious Activities pp1");
+                        gn.setSubject("Religious Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -124,7 +124,7 @@ public class religious_act_pp1 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("The bible");
-                        gn.setSubject("Religious Activities pp1");
+                        gn.setSubject("Religious Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -144,7 +144,7 @@ public class religious_act_pp1 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("Christian values");
-                        gn.setSubject("Religious Activities pp1");
+                        gn.setSubject("Religious Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }
@@ -164,7 +164,7 @@ public class religious_act_pp1 extends Fragment {
                         kk_pb.setVisibility(View.VISIBLE);
                         gn.setStudent_name(mParam1);
                         gn.setTopic("The church");
-                        gn.setSubject("Religious Activities pp1");
+                        gn.setSubject("Religious Activities PP1");
                         gn.setTopic_rating(item);
                         makeRating(gn,ada, kk_pb,tok);
                     }

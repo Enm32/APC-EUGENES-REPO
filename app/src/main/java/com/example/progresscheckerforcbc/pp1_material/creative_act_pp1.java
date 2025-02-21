@@ -96,7 +96,7 @@ public class creative_act_pp1 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("Myself");
-                        mnn.setSubject("Creative Activities pp1");
+                        mnn.setSubject("Creative Activities PP1");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
                     }
@@ -116,7 +116,7 @@ public class creative_act_pp1 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("My home");
-                        mnn.setSubject("Creative Activities pp1");
+                        mnn.setSubject("Creative Activities PP1");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
                     }
@@ -136,7 +136,7 @@ public class creative_act_pp1 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("My school");
-                        mnn.setSubject("Creative Activities pp1");
+                        mnn.setSubject("Creative Activities PP1");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
                     }
@@ -156,7 +156,7 @@ public class creative_act_pp1 extends Fragment {
                         kpb.setVisibility(View.VISIBLE);
                         mnn.setStudent_name(mParam1);
                         mnn.setTopic("My family");
-                        mnn.setSubject("Creative Activities pp1");
+                        mnn.setSubject("Creative Activities PP1");
                         mnn.setTopic_rating(item);
                         makeRating(mnn,ada, kpb,tok);
                     }

@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.progresscheckerforcbc.CryptoManager;
+import com.example.progresscheckerforcbc.NotificationHandler;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -76,7 +77,7 @@ public class mathpp2 extends Fragment {
 
             CryptoManager mnjk=new CryptoManager(getContext());
             String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
-
+            NotificationHandler ndh=new NotificationHandler(tok,mParam1);
 
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
@@ -91,9 +92,10 @@ public class mathpp2 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Pre-Numbering Activity");
-                        kadm.setSubject("Mathematics Activities pp2");
+                        kadm.setSubject("Mathematics PP2");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -111,9 +113,10 @@ public class mathpp2 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Numbering");
-                        kadm.setSubject("Mathematics Activities pp2");
+                        kadm.setSubject("Mathematics PP2");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -131,9 +134,10 @@ public class mathpp2 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Measurement");
-                        kadm.setSubject("Mathematics Activities pp2");
+                        kadm.setSubject("Mathematics PP2");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -151,9 +155,10 @@ public class mathpp2 extends Fragment {
                         pb.setVisibility(View.VISIBLE);
                         kadm.setStudent_name(mParam1);
                         kadm.setTopic("Geometry");
-                        kadm.setSubject("Mathematics Activities pp2");
+                        kadm.setSubject("Mathematics PP2");
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                        ndh.sendNotification();
                     }
                 }
 

@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.progresscheckerforcbc.CryptoManager;
+import com.example.progresscheckerforcbc.NotificationHandler;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -76,7 +77,7 @@ public class languaeActpp2 extends Fragment {
 
             CryptoManager mnjk=new CryptoManager(getContext());
             String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
-
+            NotificationHandler ndh=new NotificationHandler(tok,mParam1);
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model lnn =new add_rating_model();
@@ -90,9 +91,10 @@ public class languaeActpp2 extends Fragment {
                         ln.setVisibility(View.VISIBLE);
                         lnn.setStudent_name(mParam1);
                         lnn.setTopic("Listening and Speaking");
-                        lnn.setSubject("Language Activities pp2");
+                        lnn.setSubject("Language Activities PP2");
                         lnn.setTopic_rating(item);
                         makeRating(lnn,ada, ln,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -110,9 +112,10 @@ public class languaeActpp2 extends Fragment {
                         ln.setVisibility(View.VISIBLE);
                         lnn.setStudent_name(mParam1);
                         lnn.setTopic("Reading");
-                        lnn.setSubject("Language Activities pp2");
+                        lnn.setSubject("Language Activities PP2");
                         lnn.setTopic_rating(item);
                         makeRating(lnn,ada, ln,tok);
+                        ndh.sendNotification();
                     }
                 }
 
@@ -130,9 +133,10 @@ public class languaeActpp2 extends Fragment {
                         ln.setVisibility(View.VISIBLE);
                         lnn.setStudent_name(mParam1);
                         lnn.setTopic("Writing");
-                        lnn.setSubject("Language Activities pp2");
+                        lnn.setSubject("Language Activities PP2");
                         lnn.setTopic_rating(item);
                         makeRating(lnn,ada, ln,tok);
+                        ndh.sendNotification();
                     }
                 }
 

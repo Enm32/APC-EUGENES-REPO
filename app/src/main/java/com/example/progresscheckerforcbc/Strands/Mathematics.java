@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.progresscheckerforcbc.CryptoManager;
+import com.example.progresscheckerforcbc.NotificationHandler;
 import com.example.progresscheckerforcbc.R;
 import com.example.progresscheckerforcbc.model.add_rating_model;
 import com.example.progresscheckerforcbc.model.rating_response;
@@ -42,7 +43,7 @@ public class Mathematics extends Fragment {
         Mathematics fragment = new Mathematics();
         Bundle args = new Bundle();
         args.putString("studentName", sName);
-        args.putString("grade", sName);
+        args.putString("grade", grade);
         fragment.setArguments(args);
         return fragment;
     }
@@ -78,6 +79,7 @@ public class Mathematics extends Fragment {
             CryptoManager mnjk=new CryptoManager(getContext());
             String tok=  "Bearer " + mnjk.decrypt_m(mnjk.getKey());
 
+
             retrofit_service rs=new retrofit_service();
             add_rating_api ada=rs.getRetrofit().create(add_rating_api.class);
             add_rating_model kadm=new add_rating_model();
@@ -94,6 +96,7 @@ public class Mathematics extends Fragment {
                         kadm.setSubject("Mathematics "+ mParam2);
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                       // ndh.sendNotification();
                     }
                 }
 
@@ -114,6 +117,7 @@ public class Mathematics extends Fragment {
                         kadm.setSubject("Mathematics "+ mParam2);
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                       // ndh.sendNotification();
                     }
                 }
 
@@ -134,6 +138,7 @@ public class Mathematics extends Fragment {
                         kadm.setSubject("Mathematics "+ mParam2);
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                     //   ndh.sendNotification();
                     }
                 }
 
@@ -154,6 +159,7 @@ public class Mathematics extends Fragment {
                         kadm.setSubject("Mathematics "+ mParam2);
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                        //ndh.sendNotification();
                     }
                 }
 
@@ -174,6 +180,7 @@ public class Mathematics extends Fragment {
                         kadm.setSubject("Mathematics "+ mParam2);
                         kadm.setTopic_rating(item);
                         makeRating(kadm,ada,pb,tok);
+                        //ndh.sendNotification();
                     }
                 }
 
@@ -194,8 +201,11 @@ public class Mathematics extends Fragment {
         n.addRating(auth,m).enqueue(new Callback<rating_response>() {
             @Override
             public void onResponse(Call<rating_response> call, Response<rating_response> response) {
-                o.setVisibility(View.GONE);
+//                o.setVisibility(View.GONE);
                 Toast.makeText(getContext(),"success",Toast.LENGTH_SHORT).show();
+                NotificationHandler ndh=new NotificationHandler(auth,mParam1);
+                ndh.sendNotification();
+                o.setVisibility(View.GONE);
             }
 
             @Override
