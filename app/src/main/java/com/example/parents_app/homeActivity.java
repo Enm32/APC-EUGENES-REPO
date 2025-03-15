@@ -1,6 +1,7 @@
 package com.example.parents_app;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -74,6 +75,7 @@ try {
 
 
     }
+
     @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,9 +95,9 @@ try {
         if (id == R.id.item1) {
 
             try {
+              Intent addStudent=new Intent(getApplicationContext(), addStudent.class);
+               startActivity(addStudent);
 
-
-               // Toast.makeText(homeActivity.this,encrypth(messageToEncrypt,mn) , Toast.LENGTH_SHORT).show();
 
             } catch (Exception e) {
                // throw new RuntimeException(e);
@@ -106,12 +108,10 @@ try {
             return true;
         } else if (id == R.id.item2) {
 
+            Intent SwitchStudent=new Intent(getApplicationContext(), students_list.class);
+            startActivity(SwitchStudent);
 
 
-
-            return true;
-        } else if (id == R.id.item3) {
-            Toast.makeText(homeActivity.this, "Shows jdkd icon", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -120,123 +120,6 @@ try {
 
     public List<String> get_Subjects_array(String current_grade){
 
-
-//        switch (current_grade){
-//            case "Grade 1":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religous Education");
-//                subjects.add("Creative Activities");
-//                subjects.add("Environmental activities");
-//                subjects.add("Hygiene and Nutrition");
-//                return  subjects;
-//            case "Grade 2":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religous Education");
-//                subjects.add("Creative Activities");
-//                subjects.add("Environmental activities");
-//                subjects.add("Hygiene and Nutrition");
-//                return  subjects;
-//            case "Grade 3":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Creative Activities");
-//                subjects.add("Environmental Activities");
-//                subjects.add("Hygiene and Nutrition");
-//                return  subjects;
-//            case "Grade 4":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Creative Activities");
-//                subjects.add("Agriculture");
-//                subjects.add("Music");
-//                subjects.add("PE");
-//                subjects.add("Science");
-//                subjects.add("Social studies");
-//                return  subjects;
-//            case "Grade 5":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Creative Activities");
-//                subjects.add("Agriculture");
-//                subjects.add("Music");
-//                subjects.add("PE");
-//                subjects.add("Science");
-//                subjects.add("Social studies");
-//                return  subjects;
-//            case "Grade 6":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Creative Activities");
-//                subjects.add("Agriculture");
-//                subjects.add("Music");
-//                subjects.add("PE");
-//                subjects.add("Science");
-//                subjects.add("Social studies");
-//                return  subjects;
-//            case "Grade 7":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Home science");
-//                subjects.add("Agriculture");
-//                subjects.add("Visual arts");
-//                subjects.add("PE");
-//                subjects.add("Science");
-//                subjects.add("Social studies");
-//                subjects.add("Pre-Technical Studies");
-//                return  subjects;
-//            case "Grade 8":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Home science");
-//                subjects.add("Agriculture");
-//                subjects.add("Visual arts");
-//                subjects.add("PE");
-//                subjects.add("Science");
-//                subjects.add("Social studies");
-//                subjects.add("Pre-Technical Studies");
-//                return  subjects;
-//            case "Grade 9":
-//                subjects.add("Mathematics");
-//                subjects.add("Kiswahili");
-//                subjects.add("English");
-//                subjects.add("Religious Education");
-//                subjects.add("Home science");
-//                subjects.add("Agriculture");
-//                subjects.add("Visual arts");
-//                subjects.add("PE");
-//                subjects.add("Science");
-//                subjects.add("Social studies");
-//                subjects.add("Pre-Technical Studies");
-//                return  subjects;
-//            case "PP1":
-//                subjects.add("Mathematics");
-//                subjects.add("Environmental activities");
-//                subjects.add("Language Activities");
-//                subjects.add("Religious Education");
-//                return  subjects;
-//            case "PP2":
-//                subjects.add("Mathematics");
-//                subjects.add("Environmental activities");
-//                subjects.add("Language Activities");
-//                subjects.add("Religious Education");
-//                return  subjects;
-//        }
         if (current_grade.equals("Grade 1") || current_grade.equals("Grade 2") || current_grade.equals("Grade 3")) {
             subjects.add("Mathematics");
             subjects.add("Kiswahili");

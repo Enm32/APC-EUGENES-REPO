@@ -64,6 +64,7 @@ public class sign_upActivity extends AppCompatActivity {
         retrofit_service rds = new retrofit_service();
         getRatings ssu=rds.getRetrofit().create(getRatings.class);
 
+        DBHandler dbHandler=new DBHandler(getApplicationContext());
 
 
 
@@ -72,11 +73,7 @@ public class sign_upActivity extends AppCompatActivity {
             pb.setVisibility(View.VISIBLE);
 
 
-            SharedPreferences sharedpreferences = getSharedPreferences("Important_info", MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.putString("Grade", sp.getSelectedItem().toString());
-            editor.putString("STUDENT_NAME", et3.getText().toString());
-            editor.apply();
+
 
             FirebaseMessaging.getInstance().getToken()
                     .addOnCompleteListener(task -> {
@@ -86,14 +83,32 @@ public class sign_upActivity extends AppCompatActivity {
                             return;
                         }
                         String notiftoken = task.getResult();
+
+                        SharedPreferences sharedpreferences = getSharedPreferences("Important_info", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
+                        editor.putString("Grade", sp.getSelectedItem().toString());
+                        editor.putString("STUDENT_NAME", et3.getText().toString());
+                        editor.putString("Parent_name",et1.getText().toString());
+                        editor.putString("Parent_email",et2.getText().toString());
+                        editor.putString("Parent_phone",et4.getText().toString());
+//                        editor.putString("Parent_phone",et4.getText().toString());
+                        editor.putString("NotificationToken",notiftoken);
+                        editor.apply();
+
+
                         Toast.makeText(sign_upActivity.this,notiftoken , Toast.LENGTH_SHORT).show();
                         // Log.i(TAG, notiftoken.toString());
-                        studentSignup newStudent=new studentSignup(et3.getText().toString(),et1.getText().toString(),sp.getSelectedItem().toString(),et4.getText().toString(),et2.getText().toString(),notiftoken);
+                        dbHandler.addStudent(et3.getText().toString(),sp.getSelectedItem().toString());
 
+                        studentSignup newStudent=new studentSignup(et3.getText().toString(),et1.getText().toString(),sp.getSelectedItem().toString(),et4.getText().toString(),et2.getText().toString(),notiftoken);
                         ssu.sign_up(newStudent).enqueue(new Callback<signUpresponse>() {
                             @Override
                             public void onResponse(@NonNull Call<signUpresponse> call, @NonNull Response<signUpresponse> response) {
                                 pb.setVisibility(View.GONE);
+                                Intent mov_next = new Intent(getApplicationContext(), otpLoginActivity.class);
+                                mov_next.putExtra("email",et2.getText().toString());
+                                mov_next.putExtra("nm",et3.getText().toString());
+                                startActivity(mov_next);
                             }
 
                             @Override
@@ -104,10 +119,7 @@ public class sign_upActivity extends AppCompatActivity {
                             }
                         });
 
-                        Intent mov_next = new Intent(getApplicationContext(), otpLoginActivity.class);
-                        mov_next.putExtra("email",et2.getText().toString());
-                        mov_next.putExtra("nm",et3.getText().toString());
-                        startActivity(mov_next);
+
                     });
 
 
