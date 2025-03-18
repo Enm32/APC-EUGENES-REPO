@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange_button">#FF7F50</color>
+    <color name="blue_button">#1E3A8A</color>
+    <color name="purple_card">#6366F1</color>
+    <color name="avatar_background">#D1D5DB</color>
+    <color name="gray_text">#666666</color>
+    <color name="gray_border">#DDDDDD</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="input_border">#E0E0E0</color>
+    <color name="blue_link">#007BFF</color>
 </resources>

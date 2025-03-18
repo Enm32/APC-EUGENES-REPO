@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
             CardView cv = findViewById(R.id.pp1card);
             CardView cv1 = findViewById(R.id.pp2card);
-            CardView cv2 = findViewById(R.id.pp3card);
             CardView vv = findViewById(R.id.grade1card);
             CardView vv3 = findViewById(R.id.grade2card);
             CardView g3 = findViewById(R.id.grade3card);
@@ -111,11 +110,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                 startActivity(i);
             });
 
-            cv2.setOnClickListener(v -> {
-                Intent i = new Intent(getApplicationContext(), otLogin.class);
 
-                startActivity(i);
-            });
             vv.setOnClickListener(this);
             vv3.setOnClickListener(this);
             g3.setOnClickListener(this);
