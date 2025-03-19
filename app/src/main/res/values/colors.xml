@@ -5,4 +5,8 @@
     <color name="purple">#a83299</color>
     <color name="green">#0F9D58</color>
     <color name="mainColor">#c9c9c9</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="blue_link">#007BFF</color>
+    <color name="blue_button">#1E3A8A</color>
 </resources>
