@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: progress_checker.progress_checker.ProgressCheckerApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 78.19 s -- in progress_checker.progress_checker.ProgressCheckerApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.99 s -- in progress_checker.progress_checker.ProgressCheckerApplicationTests

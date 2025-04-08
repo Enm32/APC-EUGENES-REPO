@@ -35,8 +35,10 @@ public ResponseEntity<signUpresponse> add_student(studentSignup sSu) {
 public students get_by_name(String name){
    return sr.findByStudentname(name).orElse(null);
 }
-public List<students> get_by_grade(gradeclasses sg){
-   return sr.findByStudentGrade(sg).orElse(null);
+public List<students> get_by_grade(String sg){
+   gradeclasses ng=new gradeclasses();
+   ng.setGname(sg);
+   return sr.findByStudentGrade(ng).orElse(null);
 }
 
 public List<students> getAllStudents(){

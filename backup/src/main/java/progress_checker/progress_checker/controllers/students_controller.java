@@ -48,7 +48,7 @@ return ss.add_student(ssu);
 
 }
 @GetMapping("/get_by_grade")
-public List<students> get_grade_Students(@RequestBody gradeclasses grade) {
+public List<students> get_grade_Students(@RequestParam("grade") String grade) {
     return ss.get_by_grade(grade);
 }
 @GetMapping("/get_by_name/{sname}")
