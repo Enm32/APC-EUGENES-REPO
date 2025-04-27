@@ -4,6 +4,7 @@ progress_checker\progress_checker\controllers\otpConroller.class
 progress_checker\progress_checker\services\otpService.class
 progress_checker\progress_checker\request_models\subjectsModel.class
 progress_checker\progress_checker\controllers\ratings_controller.class
+application.properties
 progress_checker\progress_checker\response_models\signUpresponse$signUpresponseBuilder.class
 progress_checker\progress_checker\entities\Otp.class
 progress_checker\progress_checker\response_models\tokenresponse$tokenresponseBuilder.class

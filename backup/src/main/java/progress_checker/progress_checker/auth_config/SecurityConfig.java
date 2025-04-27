@@ -52,7 +52,7 @@ public class SecurityConfig {
                   //    })
                  authorizeHttpRequests(auth -> {
               auth
-                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject","/teachers/auth/get_token","/getallStudents","upgradeStudent/{id1}/{id2}").permitAll()
+                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject","/teachers/auth/get_token","/getallStudents").permitAll()
                       .anyRequest().authenticated();
           })
                   .sessionManagement(httpSecuritySessionManagementConfigurer -> {
