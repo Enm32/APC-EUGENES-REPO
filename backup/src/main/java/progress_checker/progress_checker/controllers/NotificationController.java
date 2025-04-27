@@ -19,7 +19,7 @@ public class NotificationController {
     private FCMService fcmService;
 
     @PostMapping("/notification")
-    public ResponseEntity sendNotification(@RequestBody NotificationRequest request) throws ExecutionException, InterruptedException {
+    public ResponseEntity<NotificationResponse> sendNotification(@RequestBody NotificationRequest request) throws ExecutionException, InterruptedException {
         fcmService.sendMessageToToken(request);
         return new ResponseEntity<>(new NotificationResponse(HttpStatus.OK.value(), "Notification has been sent."), HttpStatus.OK);
     }

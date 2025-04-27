@@ -5,10 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -54,7 +52,7 @@ public class SecurityConfig {
                   //    })
                  authorizeHttpRequests(auth -> {
               auth
-                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject","/teachers/auth/get_token","/getallStudents").permitAll()
+                      .requestMatchers("/auth/get_token","/addStudent","/addTeacher","/send_otp","/notification","/verify_otp","/new_grade","/addsubject","/teachers/auth/get_token","/getallStudents","upgradeStudent/{id1}/{id2}").permitAll()
                       .anyRequest().authenticated();
           })
                   .sessionManagement(httpSecuritySessionManagementConfigurer -> {

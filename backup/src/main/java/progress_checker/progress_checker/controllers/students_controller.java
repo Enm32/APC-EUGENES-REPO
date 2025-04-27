@@ -3,23 +3,19 @@ package progress_checker.progress_checker.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import progress_checker.progress_checker.auth_config.JwtService;
 import progress_checker.progress_checker.auth_config.studentsAuthenticationManager;
-import progress_checker.progress_checker.entities.gradeclasses;
 import progress_checker.progress_checker.entities.students;
 import progress_checker.progress_checker.request_models.studentSignup;
 import progress_checker.progress_checker.response_models.NotificationResponse;
-import progress_checker.progress_checker.response_models.otpResponse;
 import progress_checker.progress_checker.response_models.signUpresponse;
 import progress_checker.progress_checker.response_models.tokenresponse;
 import progress_checker.progress_checker.services.studentService;
@@ -82,6 +78,13 @@ public String getact() {
 public ResponseEntity<NotificationResponse> getNotificationtoken(@RequestParam String studentName) {
     return ss.get_notifToken(studentName);
 }
+
+@PostMapping("/upgradeStudent/{id1}/{id2}")
+public ResponseEntity<?> up_grade(@PathVariable String id1,@PathVariable String id2 ){
+return ss.update_student(id1,id2);
+
+}
+
 
 
 }

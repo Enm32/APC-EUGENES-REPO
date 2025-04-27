@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import progress_checker.progress_checker.auth_config.JwtService;
-import progress_checker.progress_checker.auth_config.studentsAuthenticationManager;
 import progress_checker.progress_checker.auth_config.teacherAuthenticationManager;
 import progress_checker.progress_checker.entities.subjects;
 import progress_checker.progress_checker.entities.teachers;

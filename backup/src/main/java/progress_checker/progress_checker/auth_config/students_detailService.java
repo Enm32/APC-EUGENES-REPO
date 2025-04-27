@@ -2,17 +2,13 @@ package progress_checker.progress_checker.auth_config;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import progress_checker.progress_checker.entities.students;
-import progress_checker.progress_checker.entities.teachers;
 import progress_checker.progress_checker.repositories.studentsRepo;
-import progress_checker.progress_checker.repositories.teachersRepo;
 
 @Service 
 public class students_detailService implements UserDetailsService  {

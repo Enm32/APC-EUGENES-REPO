@@ -44,6 +44,7 @@ progress_checker\progress_checker\entities\ratings.class
 progress_checker\progress_checker\response_models\rating_response.class
 progress_checker\progress_checker\request_models\studentSignup.class
 progress_checker\progress_checker\request_models\add_rating_model.class
+progress_checker\progress_checker\response_models\upgrade_subjectResponse.class
 progress_checker\progress_checker\response_models\otpResponse.class
 progress_checker\progress_checker\controllers\gradecontroller.class
 progress_checker\progress_checker\entities\teachers$teachersBuilder.class

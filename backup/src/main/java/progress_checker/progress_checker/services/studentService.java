@@ -11,6 +11,7 @@ import progress_checker.progress_checker.repositories.studentsRepo;
 import progress_checker.progress_checker.request_models.studentSignup;
 import progress_checker.progress_checker.response_models.NotificationResponse;
 import progress_checker.progress_checker.response_models.signUpresponse;
+import progress_checker.progress_checker.response_models.upgrade_subjectResponse;
 
 import java.util.List;
 
@@ -49,5 +50,17 @@ students st=sr.findByStudentname(name).orElse(null);
 return ResponseEntity.status(200).body(new NotificationResponse(HttpStatus.OK.value(), st.getNotificationToken()));
 }
 
+
+public ResponseEntity<upgrade_subjectResponse> update_student(String sname,String grade_name){
+   students df=sr.findByStudentname(sname).orElse(null);
+   if(df== null){
+      return ResponseEntity.ok(new upgrade_subjectResponse(HttpStatus.OK.value(),"Student not found"));
+   }
+   gradeclasses s_grade=gser.get_grade(grade_name);
+   df.setStudentGrade(s_grade);
+     sr.saveAndFlush(df);
+     return ResponseEntity.ok(new upgrade_subjectResponse(HttpStatus.OK.value(),"success"));
+
+}
 
 }

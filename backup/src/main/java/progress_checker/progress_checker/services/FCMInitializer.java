@@ -20,6 +20,7 @@ public class FCMInitializer {
     @Value("${app.firebase-configuration-file}")
     private String firebaseConfigPath;
     Logger logger = LoggerFactory.getLogger(FCMInitializer.class);
+    @SuppressWarnings("deprecation")
     @PostConstruct
     public void initialize() {
         try {
